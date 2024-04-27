@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Loader from './Loader'
 import Header from './Header';
+import Navbar  from './Navbar';
+import Contact from './Contact';
 import './App.css'
+import CircleIcon from '@mui/icons-material/Circle';
 
 
 function App() {
@@ -21,7 +24,9 @@ function App() {
         showLoader ? <Loader/>
          :
         <>
+          <Navbar/>
           <Header/>
+          <Contact/>
         </>
 
       }

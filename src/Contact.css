@@ -1,0 +1,73 @@
+.contactBody{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    height: 400px;
+    border-bottom: 1px solid white;
+    padding: 30px;
+}
+
+.contactDesc{
+    width: 450px;
+    padding-left: 200px;
+}
+
+.contactDesc > .start{
+    font-size: 60px;
+}
+
+.contactDesc > .end{
+    padding-top: 20px;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.contactForm{
+    position: relative;
+    right:10%;
+    padding-right: 50px;
+}
+
+.contactForm > div{
+    margin: 15px;
+}
+
+.contactForm > div > input {
+    margin: 5px;
+    width: 400px;
+    height: 30px;
+    opacity: 0.8;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: rgb(61, 61, 61);
+    caret-color: white;
+    color: white;
+}
+
+
+.contactForm > div > textarea{
+    margin: 5px;
+    width: 400px;
+    height: 100px;
+    opacity: 0.8;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: rgb(61,61,61);
+    caret-color: white;
+    color: white;
+}
+
+.contactForm > button{
+    margin: 20px;
+    width: 410px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: blueviolet;
+}

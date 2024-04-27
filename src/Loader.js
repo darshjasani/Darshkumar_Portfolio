@@ -14,6 +14,8 @@ function Loader() {
                 <div class="lightsaber ls-right ls-green"></div>
             </div>
         </div>
+
+        <div style={{color:'white',fontSize:'20px',position:'absolute', top:'63%', left:'50%', transform:'translate(-50%,-50%)'}}>Loading Profile ...</div>
     </>
   )
 }
