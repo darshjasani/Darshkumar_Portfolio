@@ -1,0 +1,34 @@
+.footerBody{
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    background-color: rgb(24, 24, 24);
+}
+
+.footerStart{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.footerStart > .MuiSvgIcon-root{
+    font-size: 20px;
+}
+.footerEnd{
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.footerEnd > div{
+    margin: 15px;
+}
+
+.footerEnd > .flinks:hover{
+    opacity: 0.8;
+    cursor: pointer;
+    text-decoration: underline;
+}

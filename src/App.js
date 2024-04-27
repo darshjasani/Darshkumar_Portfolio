@@ -3,8 +3,8 @@ import Loader from './Loader'
 import Header from './Header';
 import Navbar  from './Navbar';
 import Contact from './Contact';
+import Footer from './Footer';
 import './App.css'
-import CircleIcon from '@mui/icons-material/Circle';
 
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
           <Navbar/>
           <Header/>
           <Contact/>
+          <Footer/>
         </>
 
       }

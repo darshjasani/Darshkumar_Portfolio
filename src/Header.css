@@ -60,7 +60,7 @@ svg text {
 
 .profileImage{
   opacity: 0; /* Initially hidden */
-  animation: slideDown 1.5s ease forwards;
+  animation: slideDown 2s ease forwards;
   
 }
 
