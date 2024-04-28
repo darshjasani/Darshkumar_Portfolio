@@ -1,0 +1,14 @@
+.eBody{
+    color: white;
+    border-bottom: 1px solid white;
+    padding: 10px;
+}
+
+.etitle{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.etitle > .MuiSvgIcon-root{
+    font-size: 20px;
+}

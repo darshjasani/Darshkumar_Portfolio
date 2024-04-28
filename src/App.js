@@ -4,6 +4,8 @@ import Header from './Header';
 import Navbar  from './Navbar';
 import Contact from './Contact';
 import Footer from './Footer';
+import Experience from './Experience';
+import Projects from './Projects';
 import './App.css'
 
 
@@ -26,6 +28,7 @@ function App() {
         <>
           <Navbar/>
           <Header/>
+          <Projects/>
           <Contact/>
           <Footer/>
         </>

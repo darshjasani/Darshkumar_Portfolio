@@ -1,0 +1,165 @@
+.pBody{
+    color: white;
+    border-bottom: 1px solid white;
+    padding: 10px;
+    height: 240vh;
+}
+
+.ptitle{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pDesc{
+    padding-top: 30px;
+    padding-left: 50px;
+    font-size: 90px;
+    width: 600px;
+    height: 100px;
+}
+.ptitle > .MuiSvgIcon-root{
+    font-size: 20px;
+}
+
+.cardBody{
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    left:55%;
+    top:80%;
+    background-color: rgb(28, 31, 35);
+    transition: opacity 0.7s ease-in;
+    
+}
+
+.fadeOut{
+    opacity: 0;
+}
+
+.fadeIn{
+    opacity: 1;
+}
+
+.cardBody > img{
+    width: 500px;
+    height: 450px;
+    aspect-ratio: 1;
+}
+
+.cTitle{
+    margin: 20px;
+    font-size: 30px;
+    margin-left: 25px;
+}
+
+.cDesc{
+    margin: 20px;
+    font-size: 20px;
+    opacity: 0.8;
+    margin-left: 25px;
+}
+
+.cLink{
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    background-color: blueviolet;
+    width: 40px;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 1.5s ease-in-out;
+}
+
+.cLink > .MuiSvgIcon-root{
+    font-size: 30px;
+}
+.cardBody:hover{
+    cursor: pointer;
+    scale: 1.05;
+
+    .cTitle{
+       color: rgb(59, 239, 218);
+       margin-left: 40px;
+    }
+    .cDesc{
+        opacity: 1;
+    }
+    .cLink{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.cardBody1{
+    left:10%;
+    top:130%
+}
+
+.cardBody2{
+    left:55%;
+    top:175%
+}
+
+.cardBody3{
+    left: 10%;
+    top:225%
+}
+
+.allProjects{
+    opacity: 0.8;
+    font-size: 20px;
+    position: absolute;
+    left: 65%;
+    top:275%;
+    color: white;
+    border: 1px solid blueviolet;
+    background-color: transparent;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.allProjects:hover{
+    opacity: 1;
+    background-color: blueviolet;
+    box-shadow: rgba(138,43,226, 0.1) 0px 8px 24px, rgba(138,43,226, 0.1) 0px 16px 56px, rgba(138,43,226, 0.1) 0px 24px 80px;
+}
+
+.fadeOut {
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  
+  .fadeOut.inview2 {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+  
+  .fadeOut.inview2:nth-child(1) {
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+  }
+  
+  .fadeOut.inview2:nth-child(2) {
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  
+  .fadeOut.inview2:nth-child(3) {
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+  }
+  
+  .fadeOut.inview2:nth-child(4) {
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
+  }
+  
+  
