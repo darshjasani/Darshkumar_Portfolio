@@ -3,6 +3,7 @@ import './Contact.css';
 import CircleIcon from '@mui/icons-material/Circle';
 
 function Contact() {
+    const email = 'darshkumar.jasani@gmail.com'
   return (
     <>
         <div className='point'><CircleIcon/> Contact me</div>
@@ -27,7 +28,7 @@ function Contact() {
                     <textarea />
                 </div>
                 
-                <button>Let's get started</button>
+                <button onClick={()=>{window.location.href = `mailto:${email}`}}>Let's get started</button>
             </div>
         </div>
     </>

@@ -25,14 +25,21 @@
 }
 .links > div{
     margin: 10px;
-    opacity: 1;
+    opacity: 0.8;
 }
 
 .links > div:hover{
     cursor: pointer;
-    opacity: 0.8;
-    background-color: white;
-    color:black;
+    opacity: 1;
+    color: rgb(0, 224, 245);
     padding: 20px;
+}
+
+.hire{
+    background-color: blueviolet;
+    padding: 20px;
+}
+.hire:hover{
+    color: white;
 }
 
