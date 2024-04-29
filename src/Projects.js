@@ -28,8 +28,8 @@ function Projects() {
 
   return (
     <>
-        <div className='pBody'>
-            <div className='ptitle'><CircleIcon/> My Projects</div>
+        <div className='pBody' id="projects">
+            <div className='ptitle'><CircleIcon/>Projects</div>
             <div className='pDesc'>Work that I've done for the past 4 years</div>
             <div>
                 <div className='cardBody fadeOut' onClick={()=>{window.location.href = 'https://slack-cone-c0ca8.web.app/'}}>

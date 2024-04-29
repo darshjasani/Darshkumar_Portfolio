@@ -7,7 +7,7 @@ function Header() {
 
   return (
     <>
-      <div>
+      <div id="home">
         <div className='point'><CircleIcon/> About</div>
         <div className='headerBody'>
           <div className='details'>

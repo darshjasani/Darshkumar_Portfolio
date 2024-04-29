@@ -5,6 +5,7 @@
   padding-top: 10px;
   padding-left: 10px;
   gap:5px;
+  font-size: 20px;
 }
 
 .point > .MuiSvgIcon-root{
@@ -33,7 +34,7 @@ svg text {
     font-size: 60px;
     font-weight: 700;
     stroke-width: 1.5;
-    animation: textAnimate 5s infinite alternate;
+    animation: textAnimate 3s infinite alternate;
 }
 
 @keyframes textAnimate {

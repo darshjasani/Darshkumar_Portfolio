@@ -8,6 +8,7 @@
     align-items: center;
     gap: 5px;
     padding: 10px;
+    font-size: 20px;
 }
 
 .stitle > .MuiSvgIcon-root{
@@ -15,11 +16,11 @@
 }
 
 .skillsContainer{
-    width: 95%;
-    margin: auto;
+    width: 90%;
+    margin: 50px auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap:100px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:70px;
     color: white;
 }
 
@@ -30,7 +31,9 @@
 .skillImg{
     display: block;
     margin: auto;
+    width: 200px;
     height: 200px;
+    opacity: 0.8;
 }
 
 .skillName{
@@ -43,8 +46,8 @@
 
 .skillLevel{
     position: absolute;
-    top:80px;
-    right: 0;
+    top:70px;
+    right: -40px;
     width: 150px;
     height: 150px;
     display: flex;
@@ -52,17 +55,111 @@
     align-items: center;
     font-size: 22px;
     border-radius: 50%;
-    border: 10px solid black; 
+    border: 10px solid black;
+    font-weight: 500;
+    font-size: 30px;
 }
 
+
+
 .skillCard:nth-child(1) .skillLevel{
-    background: #ff4f4f28;
-    border-color: #ff4f4f;
-    color:#ff4f4f;
+    background: rgba(0, 128, 0, 0.3);
+    border-color: green;
+    color:green;
 }
 
 .skillCard:nth-child(2) .skillLevel{
-    background: #ff4f4f28;
-    border-color: #ff4f4f;
-    color:#ff4f4f;
+    background: rgba(255, 166, 0, 0.3);
+    border-color: orange;
+    color:orange;
 }
+
+.skillCard:nth-child(3) .skillLevel{
+    background: rgba(153, 102, 255,0.3);
+    border-color: rgb(153, 102, 255);
+    color:rgb(153, 102, 255);
+}
+
+.skillCard:nth-child(4) .skillLevel{
+    background: rgba(51, 153, 255,0.3);
+    border-color: rgb(51, 153, 255);
+    color:rgb(51, 153, 255);
+}
+
+.skillCard:nth-child(5) .skillLevel{
+    background: rgba(165, 42, 42, 0.3);
+    border-color: brown;
+    color:brown;
+}
+
+.skillCard:nth-child(6) .skillLevel{
+    background: rgba(204, 0, 82,0.3);
+    border-color: rgb(204, 0, 82);
+    color:rgb(204, 0, 82);
+}
+
+.skillCard:nth-child(7) .skillLevel{
+    background: rgba(0, 102, 255,0.3);
+    border-color: rgb(0, 102, 255);
+    color:rgb(0, 102, 255);
+}
+
+.skillCard:nth-child(8) .skillLevel{
+    background: rgba(51, 204, 51,.3);
+    border-color: rgb(51, 204, 51);
+    color:rgb(51, 204, 51);
+}
+
+
+.skillCard:nth-child(9) .skillLevel{
+    background: rgba(0, 115, 153,0.3);
+    border-color: rgb(0, 115, 153);
+    color:rgb(0, 115, 153);
+}
+
+
+.skillCard:nth-child(10) .skillLevel{
+    background: rgba(102, 0, 204,0.3);
+    border-color: rgb(102, 0, 204);
+    color:rgb(102, 0, 204);
+}
+
+
+.skillCard:nth-child(11) .skillLevel{
+    background: rgba(245, 222, 179, 0.3);
+    border-color: wheat;
+    color:wheat
+}
+
+
+.skillCard:nth-child(12) .skillLevel{
+    background: rgba(0, 255, 153,0.3);
+    border-color: rgb(0, 255, 153);
+    color:rgb(0, 255, 153);
+}
+
+.skillCard:nth-child(13) .skillLevel{
+    background: rgba(255, 204, 204,0.3);
+    border-color: rgb(255, 204, 204);
+    color:rgb(255, 204, 204);
+}
+
+.skillCard:nth-child(14) .skillLevel{
+    background: rgba(51, 204, 204,0.3);
+    border-color: rgb(51, 204, 204);
+    color:rgb(51, 204, 204);
+}
+
+.skillCard:nth-child(15) .skillLevel{
+    background: rgba(204, 68, 0,0.3);
+    border-color: rgb(204, 68, 0);
+    color:rgb(204, 68, 0);
+}
+
+.skillCard:nth-child(16) .skillLevel{
+    background: rgba(0, 102, 102,0.3);
+    border-color: rgb(0, 102, 102);
+    color:rgb(0, 102, 102);
+}
+
+

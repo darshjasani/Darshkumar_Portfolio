@@ -5,7 +5,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 function Experience() {
   return (
     <>
-        <div className='eBody'>
+        <div className='eBody' id="experience">
             <div className='etitle'><CircleIcon/> Experience</div>
             <div className='timeline'>
               <div className='expCard'>
@@ -18,8 +18,8 @@ function Experience() {
                     <ul  className='cardDetail'>
                       <li>Modeled a data-analysis method that enhanced the efficiency of API calls to the GPT model by 30% through the
 implementation of exploratory data analysis techniques.</li>
-                      <li>Modeled a data-analysis method that enhanced the efficiency of API calls to the GPT model by 30% through the
-implementation of exploratory data analysis techniques.</li>
+                      <li>Designed a specialized chatbot solution to optimize response time for coursework-related queries, achieving a 15%
+improvement in efficiency by incorporating the LlamaIndex data framework.</li>
                     </ul>
                   </div>
               </div>

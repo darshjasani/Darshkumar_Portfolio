@@ -1,20 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Navbar.css'
 
 function Navbar() {
   const clickBtn = () =>{
-      alert('Work in Progress!!. Redirecting to LinkedIn for more details');
+      alert("Let's connect on LinkedIn to discuss the opportunity!!");
       window.location.href = 'https://www.linkedin.com/in/darsh-jasani/';
   }
+
+  useEffect(()=>{
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+  
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  })
   return (
     <>
             <div className='navbar'>
                 <div>Darshkumar Jasani</div>
                 <div className='links'>
-                    <div onClick={clickBtn}>Home</div>
-                    <div onClick={clickBtn}>Experience</div>
-                    <div onClick={clickBtn}>Projects</div>
-                    <div className='hire' onClick={clickBtn}>Hire me!</div>
+                    <a className="navElement" href="#home">Home</a>
+                    <a className="navElement" href="#experience">Experience</a>
+                    <a className="navElement" href="#projects">Projects</a>
+                    <a className='hire' onClick={clickBtn}>Hire me!</a>
                 </div>
             </div>
     </>
