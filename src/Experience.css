@@ -12,3 +12,121 @@
 .etitle > .MuiSvgIcon-root{
     font-size: 20px;
 }
+
+.timeline{
+    display: block;
+    width: 80%;
+    margin: 200px  auto;
+}
+
+.expCard{
+    width: 40%;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    display: block;
+    margin: -131px 0;
+    position: relative;
+    background-color: red;
+    cursor: pointer;
+}
+
+
+.expCard:nth-child(even){
+    margin-left: auto;
+}
+
+.expCard:nth-child(even)::before{
+    content: '';
+    position: absolute;
+    left: -19%;
+    top:50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: 5px solid black;
+    border-radius: 50%;
+}
+
+.expCard:nth-child(even)::after{
+    content: '';
+    position: absolute;
+    left: -10%;
+    top:50%;
+    transform: translateY(-50%);
+    width: 7%;
+    height: 2px;
+    background-color: white;
+    z-index: -1;
+}
+
+.expCard:nth-child(odd)::before{
+    content: '';
+    position: absolute;
+    right : -19%;
+    top:50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+.expCard:nth-child(odd)::after{
+    content: '';
+    position: absolute;
+    right: -10%;
+    top:50%;
+    transform: translateY(-50%);
+    width: 7%;
+    height: 2px;
+    background-color: white;
+    z-index: -1;
+}
+
+.expCard:nth-child(1), .expCard:nth-child(1)::before{
+    background-color: rgb(45, 45, 244);
+}
+.expCard:nth-child(2), .expCard:nth-child(2)::before{
+    background-color: green;
+}
+
+.expCard:nth-child(3), .expCard:nth-child(3)::before{
+    background-color: orange;
+}
+.expCard:nth-child(4), .expCard:nth-child(4)::before{
+    background-color: brown;
+}
+.expCard:nth-child(5), .expCard:nth-child(5)::before{
+    background-color: blueviolet;
+}
+.expCard:nth-child(6), .expCard:nth-child(6)::before{
+    background-color: rgb(244, 150, 166);
+}
+
+.expCard:nth-child(even) .expCardBody::before{
+    content: '';
+    position: absolute;
+    left: -15%;
+    top:0;
+    width: 0px;
+    height: 100%;
+    border: 1px dashed white;
+    z-index: -1;
+}
+
+.cardTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardPosition{
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: -5px;
+}
+.cardDetail > li{
+    padding: 5px;
+}
+
+

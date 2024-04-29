@@ -1,0 +1,68 @@
+.skillsBody{
+    color:white;
+    border-bottom: 1px solid white;
+}
+
+.stitle{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+}
+
+.stitle > .MuiSvgIcon-root{
+    font-size: 20px;
+}
+
+.skillsContainer{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:100px;
+    color: white;
+}
+
+.skillCard{
+    position: relative;
+}
+
+.skillImg{
+    display: block;
+    margin: auto;
+    height: 200px;
+}
+
+.skillName{
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 30px 0 20px;
+}
+
+.skillLevel{
+    position: absolute;
+    top:80px;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    border-radius: 50%;
+    border: 10px solid black; 
+}
+
+.skillCard:nth-child(1) .skillLevel{
+    background: #ff4f4f28;
+    border-color: #ff4f4f;
+    color:#ff4f4f;
+}
+
+.skillCard:nth-child(2) .skillLevel{
+    background: #ff4f4f28;
+    border-color: #ff4f4f;
+    color:#ff4f4f;
+}
