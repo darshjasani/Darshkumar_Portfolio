@@ -2,7 +2,7 @@
     color: white;
     border-bottom: 1px solid white;
     padding: 10px;
-    height: 250vh;
+    overflow-x: hidden;
 }
 
 .ptitle{
@@ -19,19 +19,38 @@
     width: 600px;
     height: 100px;
 }
+
 .ptitle > .MuiSvgIcon-root{
     font-size: 20px;
+}
+
+.cardsBody{
+    position: relative;
+   display: block;
+    width: 90%;
+    height: 80%;
+    padding: 30px;
+
+}
+
+.cardBody:nth-child(odd){
+    margin-left: auto;
+    margin-right: 50px;
+    margin-top: -60px;
+}
+
+.cardBody:nth-child(even){
+    margin-top: -400px;
+}
+.cardBody:nth-child(4){
+    margin-bottom: 100px;
 }
 
 .cardBody{
     width: 500px;
     height: 700px;
-    position: absolute;
-    left:55%;
-    top:245%;
     background-color: rgb(28, 31, 35);
     transition: opacity 0.7s ease-in;
-    
 }
 
 .fadeOut{
@@ -78,6 +97,7 @@
 .cLink > .MuiSvgIcon-root{
     font-size: 30px;
 }
+
 .cardBody:hover{
     cursor: pointer;
     scale: 1.05;
@@ -95,27 +115,16 @@
     }
 }
 
-.cardBody1{
-    left:10%;
-    top:295%
-}
-
-.cardBody2{
-    left:55%;
-    top:340%
-}
-
-.cardBody3{
-    left: 10%;
-    top:390%
+.btnBody{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: -200px;
+    margin-right: 200px;
 }
 
 .allProjects{
     opacity: 0.8;
     font-size: 20px;
-    position: absolute;
-    left: 65%;
-    top:445%;
     color: white;
     border: 1px solid blueviolet;
     background-color: transparent;
@@ -162,6 +171,154 @@
     -webkit-transition-delay: 0.4s;
             transition-delay: 0.4s;
   }
+
+  @media (max-width:768px){
+    .pBody{
+        color: white;
+        border-bottom: 1px solid white;
+        padding: 10px;
+        height: 310vh;
+    }
+    .pDesc{
+        padding: 50px;
+        font-size: 40px;
+        width: 300px;
+        height: 100px;
+    }
+
+    
+    .cardsBody{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardBody:nth-child(odd){
+        margin-left:0;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .cardBody:nth-child(even){
+        margin-top: 0px;
+    }
+    .cardBody:nth-child(4){
+        margin-bottom: 100px;
+    }
+
+    .cardBody{
+        width: 300px;
+        height: 530px;
+        background-color: rgb(28, 31, 35);
+        transition: opacity 0.7s ease-in;
+        margin: 5px;
+    }
+
+    .cardBody > img{
+        width: 300px;
+        height: 350px;
+        aspect-ratio: 1;
+    }
+        
+    .btnBody{
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: -65px;
+        margin-right: 0px;
+    }
+
+    .allProjects{
+        opacity: 0.8;
+        font-size: 15px;
+        color: white;
+        border: 1px solid blueviolet;
+        background-color: transparent;
+        padding: 20px;
+        cursor: pointer;
+    }
+
+    .cTitle{
+        margin: 10px;
+        font-size: 20px;
+        margin-left: 25px;
+    }
+    
+    .cDesc{
+        margin: 10px;
+        font-size: 13px;
+        opacity: 0.8;
+        margin-left: 25px;
+    }
+    
+    .cLink{
+        position: absolute;
+        right: 0%;
+        bottom: 0%;
+        background-color: blueviolet;
+        width: 40px;
+        height: 40px;
+        padding-top: 10px;
+        padding-left: 10px;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 1.5s ease-in-out;
+        border-bottom-right-radius: 5px;
+    }
+    
+    .cLink > .MuiSvgIcon-root{
+        font-size: 30px;
+    }
+
+    .allProjects{
+        position: relative;
+        left: 0;
+        margin-top: 10px;
+    }
+    
+  }
+
+  /* @media (min-width:1400px){
+    .pBody{
+        color: white;
+        border-bottom: 1px solid white;
+        padding: 10px;
+        height: 230vh;
+    }
+   
+    .cardBody{
+        width: 500px;
+        height: 700px;
+        position: absolute;
+        left:55%;
+        top:205%;
+        background-color: rgb(28, 31, 35);
+        transition: opacity 0.7s ease-in;
+    }
+
+    .cardBody1{
+        left:10%;
+        top:245%
+    }
+    
+    .cardBody2{
+        left:55%;
+        top:290%
+    }
+    
+    .cardBody3{
+        left: 10%;
+        top:330%
+    }
+
+    .allProjects{
+       
+        
+        left:60%;
+        top:375%;
+        
+    }
+  } */
   
 
   

@@ -2,6 +2,7 @@ import React from 'react'
 import './Header.css'
 import img from './profile2.jpeg'
 import CircleIcon from '@mui/icons-material/Circle';
+
 function Header() {
 
 
@@ -23,13 +24,15 @@ function Header() {
                 Web & Software Developer
               </text>
 
-              <text x="48%" y="70%"  text-anchor="middle">
+              <text className="secondText" x="48%" y="70%"  text-anchor="middle">
                 based in California.
               </text>
             </svg>
             </div>
           </div>
-          <img src = {img} className='profileImage'/>
+          <div>
+            <img src = {img} className='profileImage'/>
+          </div>
         </div>
       </div>
     </>

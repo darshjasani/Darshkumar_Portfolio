@@ -71,3 +71,84 @@
     color: white;
     background-color: blueviolet;
 }
+
+@media (max-width:768px){
+    .contactBody{
+        padding: 10px;
+    }
+    
+    .contactDesc{
+        width: 100%;
+        padding-left: 20px;
+    }
+    
+    .contactDesc > .start{
+        font-size: 30px;
+    }
+    
+    .contactDesc > .end{
+        padding-top: 20px;
+        font-size: 15px;
+        opacity: 0.8;
+    }
+    
+    .contactForm{
+        position: relative;
+        right:0%;
+        margin-top: -10px;
+        padding-right: 50px;
+    }
+    
+    .contactForm > div{
+        margin: 15px;
+    }
+    
+    .contactForm > div > input {
+        margin: 5px;
+        width: 230px;
+        height: 30px;
+        opacity: 0.8;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        padding-left: 10px;
+        background-color: rgb(61, 61, 61);
+        caret-color: white;
+        color: white;
+    }
+    
+    
+    .contactForm > div > textarea{
+        margin: 5px;
+        width: 230px;
+        height: 100px;
+        opacity: 0.8;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        padding-left: 10px;
+        background-color: rgb(61,61,61);
+        caret-color: white;
+        color: white;
+    }
+    
+    .contactForm > button{
+        margin: 20px;
+        width: 240px;
+        height: 40px;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+        color: white;
+        background-color: blueviolet;
+    }
+    
+}
+
+@media (min-width:1600px) {
+    .contactForm{
+        position: relative;
+        right:20%;
+        padding-right: 50px;
+    }
+}

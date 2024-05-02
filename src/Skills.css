@@ -162,4 +162,46 @@
     color:rgb(0, 102, 102);
 }
 
+@media (max-width:768px){
+    .skillsContainer{
+        width: 90%;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap:20px;
+        color: white;
+    }
+
+    .skillImg{
+        display: block;
+        margin: auto;
+        width: 100px;
+        height: 100px;
+        opacity: 0.8;
+    }
+    
+    .skillName{
+        font-size: 20px;
+        font-weight: 300;
+        text-align: center;
+        text-transform: capitalize;
+        margin: 30px 0 20px;
+    }
+    
+    .skillLevel{
+        position: absolute;
+        top:50px;
+        left: 110px;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2px;
+        border-radius: 50%;
+        border: 3px solid black;
+        font-weight: 300;
+        font-size: 30px;
+    }
+}
 

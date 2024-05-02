@@ -12,7 +12,6 @@ import './App.css'
 
 function App() {
   const [showLoader, setShowLoader] = useState(true);
-
   useEffect(() =>{
     const timer = setInterval(()=>{
       setShowLoader(false);
@@ -21,6 +20,7 @@ function App() {
     return () => clearTimeout(timer)
   }, [])
 
+  
   return (
     <>
       {

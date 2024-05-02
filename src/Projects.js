@@ -31,7 +31,7 @@ function Projects() {
         <div className='pBody' id="projects">
             <div className='ptitle'><CircleIcon/>Projects</div>
             <div className='pDesc'>Work that I've done for the past 4 years</div>
-            <div>
+            <div className='cardsBody'>
                 <div className='cardBody fadeOut' onClick={()=>{window.location.href = 'https://slack-cone-c0ca8.web.app/'}}>
                         <img src={chatimg}/>
                         <div className='cTitle'>
@@ -75,8 +75,10 @@ function Projects() {
                         </div>
                         <div className='cLink'><CallMadeIcon/></div>
                 </div>
-
-                <button className='allProjects fadeOut' onClick={()=>{window.location.href = 'https://github.com/darshjasani' }}>VIEW ALL PROJECTS</button>
+                
+                <div className='btnBody'>
+                    <button className='allProjects fadeOut' onClick={()=>{window.location.href = 'https://github.com/darshjasani' }}>VIEW ALL PROJECTS</button>
+                </div>
             </div>
         </div>
     </>
