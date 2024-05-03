@@ -6,7 +6,7 @@ import img from './profile.jpeg'
 import chatimg from  './chatapp.png'
 import weatherimg from './weather.png'
 import movieimg from './MovieRecom.jpeg'
-import bankimg from './BankingSys.jpeg'
+import bugimg from './Bughound.png'
 function Projects() {
     useEffect(()=>{
       const items = document.querySelectorAll('.fadeOut');
@@ -32,7 +32,7 @@ function Projects() {
             <div className='ptitle'><CircleIcon/>Projects</div>
             <div className='pDesc'>Work that I've done for the past 4 years</div>
             <div className='cardsBody'>
-                <div className='cardBody fadeOut' onClick={()=>{window.location.href = 'https://slack-cone-c0ca8.web.app/'}}>
+                <div className='cardBody fadeOut' onClick={()=>{window.location.href = 'https://github.com/darshjasani/ChatHub'}}>
                         <img src={chatimg}/>
                         <div className='cTitle'>
                             Chat Application
@@ -43,7 +43,18 @@ function Projects() {
                         <div className='cLink'><CallMadeIcon/></div>
                 </div>
 
-                <div className='cardBody cardBody1 fadeOut' onClick={()=>{window.location.href = 'https://weatherapp-dcc56.web.app/' }}>
+                <div className='cardBody cardBody1 fadeOut' onClick={()=>{window.location.href = 'https://github.com/darshjasani/BugHound' }}>
+                        <img src={bugimg}/>
+                        <div className='cTitle'>
+                            Bughound Bug Tracking Software
+                        </div>
+                        <div className='cDesc'>
+                        Bughound is a secure, web-based bug recording and tracking software designed for testing and verifying product functionality. The project is a scaled-back version of a previous product developed for a company in Bellevue, WA.
+                        </div>
+                        <div className='cLink'><CallMadeIcon/></div>
+                </div>
+
+                <div className='cardBody cardBody2 fadeOut' onClick={()=>{window.location.href = 'https://github.com/darshjasani/WeatherWebApp' }}>
                         <img src={weatherimg}/>
                         <div className='cTitle'>
                             Weather Forecast
@@ -54,7 +65,7 @@ function Projects() {
                         <div className='cLink'><CallMadeIcon/></div>
                 </div>
 
-                <div className='cardBody cardBody2 fadeOut' onClick={()=>{window.location.href = 'https://github.com/darshjasani/Movie-Recommender' }}>
+                <div className='cardBody cardBody3 fadeOut' onClick={()=>{window.location.href = 'https://github.com/darshjasani/Movie-Recommender' }}>
                         <img src={movieimg}/>
                         <div className='cTitle'>
                             Movie Recommendation Model
@@ -65,16 +76,7 @@ function Projects() {
                         <div className='cLink'><CallMadeIcon/></div>
                 </div>
 
-                <div className='cardBody cardBody3 fadeOut' onClick={()=>{window.location.href = 'https://github.com/darshjasani/Banking-System' }}>
-                        <img src={bankimg}/>
-                        <div className='cTitle'>
-                            Banking System
-                        </div>
-                        <div className='cDesc'>
-                        This Java program simulates a bank system with functionalities like withdrawal, deposit, and balance checking for Savings and Current Accounts, incorporating constraints such as minimum balance requirements and government or central bank regulations.
-                        </div>
-                        <div className='cLink'><CallMadeIcon/></div>
-                </div>
+                
                 
                 <div className='btnBody'>
                     <button className='allProjects fadeOut' onClick={()=>{window.location.href = 'https://github.com/darshjasani' }}>VIEW ALL PROJECTS</button>

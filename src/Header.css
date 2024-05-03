@@ -138,3 +138,27 @@ svg text {
     height: 500px;
   }
 }
+
+@media (max-width:375px){
+  .patterns{
+    position:absolute;
+    top:60%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    width: 90%;
+    height: 20%;
+    padding-left: 12px;
+  }
+
+  svg text{
+    align-items:center;
+    font-family: Lora;
+    letter-spacing: 1px;
+    stroke: white;
+    font-size: 27px;
+    font-weight: 10;
+    stroke-width: 1.5;
+    animation: textAnimate 5s infinite alternate;
+  }
+}

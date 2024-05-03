@@ -4,6 +4,12 @@ import CircleIcon from '@mui/icons-material/Circle';
 
 function Contact() {
     const email = 'darshkumar.jasani@gmail.com'
+    const redirect = () =>{
+        let a = window.confirm("Let's connect over LinkedIn?");
+        if(a){
+            window.location.href = "https://www.linkedin.com/in/darsh-jasani/";
+        }
+    }
   return (
     <>
         <div className='point'><CircleIcon/> Contact me</div>
@@ -15,17 +21,17 @@ function Contact() {
             <div className='contactForm'>
                 <div>
                     Subject : <br/>
-                    <input type='text' />
+                    <input type='text' onChange={redirect}/>
                 </div>
 
                 <div>
                     Email Address : <br/>
-                    <input type='email' />
+                    <input type='email' onChange={redirect}/>
                 </div>
                 
                 <div>
                     Message : <br/>
-                    <textarea />
+                    <textarea onChange={redirect}/>
                 </div>
                 
                 <button onClick={()=>{window.location.href = `mailto:${email}`}}>Let's get started</button>

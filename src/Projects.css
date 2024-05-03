@@ -30,7 +30,6 @@
     width: 90%;
     height: 80%;
     padding: 30px;
-
 }
 
 .cardBody:nth-child(odd){
@@ -51,6 +50,7 @@
     height: 700px;
     background-color: rgb(28, 31, 35);
     transition: opacity 0.7s ease-in;
+    border-radius: 5px;
 }
 
 .fadeOut{
@@ -65,6 +65,8 @@
     width: 500px;
     height: 450px;
     aspect-ratio: 1;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .cTitle{
@@ -92,6 +94,7 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 1.5s ease-in-out;
+    border-bottom-right-radius: 5px;
 }
 
 .cLink > .MuiSvgIcon-root{
@@ -212,7 +215,7 @@
         height: 530px;
         background-color: rgb(28, 31, 35);
         transition: opacity 0.7s ease-in;
-        margin: 5px;
+        margin: 10px 0;
     }
 
     .cardBody > img{

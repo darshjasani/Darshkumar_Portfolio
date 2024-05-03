@@ -288,3 +288,54 @@
         z-index: -1;
     }
 }
+
+@media (max-width:375px) {
+    .eBody{
+        padding: 5px;
+    }
+    .timeline{
+        width: 95%;
+    }
+    .expCard{
+        width: 50%;
+        padding: 0px;
+        border-radius: 10px;
+        color: white;
+        display: block;
+        margin: -151px 0px;
+        position: relative;
+        background-color: red;
+        cursor: pointer; 
+    }
+
+    .cardDetail > li{
+        font-size: 10px;
+        padding: 2px;
+        padding-bottom: 10px;
+        width: auto;
+        height: 90px;
+        
+        
+    }
+
+    .expCard:nth-child(even)::before{
+        display: none;
+        margin-left: 5px;
+    }
+    
+    .expCard:nth-child(even)::after{
+        display: none;
+    }
+
+    .expCard:nth-child(odd)::before{
+        display: none;
+    }
+    
+    .expCard:nth-child(odd)::after{
+        display: none;
+    }
+    
+    .expCard:nth-child(even) .expCardBody::before{
+        display: none;
+    }
+}

@@ -46,7 +46,7 @@ improvement in efficiency by incorporating the LlamaIndex data framework.</li>
                     </div>
 
                     <ul  className='cardDetail'>
-                      <li>Achieved a significant 20% reduction in response time by developing APIs using AngularJS, resulting in streamlined data entry and retrieval operations within SQL Server. </li>
+                      <li>Achieved a significant 20% reduction in response time by developing REST APIs using AngularJS, resulting in streamlined data entry and retrieval operations within SQL Server. </li>
                       <li>Resolved server latency issues by shifting from monolithic applications to microservices-based communication,
 reducing the development time from 10 days to a mere 2 days via an object-oriented design.</li>
                     </ul>
@@ -61,10 +61,10 @@ reducing the development time from 10 days to a mere 2 days via an object-orient
                     </div>
 
                     <ul  className='cardDetail'>
-                      <li>Built a full-stack web application tailored for faculty requirements, ultimately leading to a notable time savings
-of 20+ hours per week.hours per week.hours per week.hours per week.</li>
+                      <li>Built a full-stack web application tailored for faculty needs and requirements, ultimately leading to a notable time savings
+of 20+ hours per week using MVC architecture.</li>
                       <li>Spearheaded the automation of invoicing, report generation, and statistical analysis tasks, which led to a remarkable
-50% reduction in wait time.n wait time.n wait time.n wait time.</li>
+50% reduction in wait time by optimizing SQL queries.</li>
                     </ul>
                   </div>
               </div>
@@ -94,7 +94,7 @@ of 20+ hours per week.hours per week.hours per week.hours per week.</li>
 
                     <ul  className='cardDetail'>
                       <li>Refined my organizational, negotiation, teamwork, and event management skills, enriching my capabilities and deepening my understanding of orchestrating large-scale events effectively.</li>
-                      <li>Engaging in multifaceted tasks such as event design, sponsor acquisition, and promotional outreach across multiple colleges, I significantly expanded both my skill repertoire and professional network.</li>
+                      <li>Engaging in multifaceted tasks such as event design, sponsor acquisition, and promotional outreach across multiple colleges, which significantly expanded both my skill repertoire and professional network.</li>
                     </ul>
                   </div>
               </div>
