@@ -4,3 +4,30 @@ body{
   background-color: black; 
   overflow-x: hidden;
 }
+
+#trailer{
+  height: 35px;
+  width: 35px;
+  background-color:rgba(255, 132, 0, 0.2);
+  border: 2px solid rgb(255, 132, 0);
+  border-radius: 35px;
+  position: fixed;
+  z-index: 10000;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 500ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body:hover > #trailer{
+  opacity: 1;
+}
+
+#circle{
+  width: 7px;
+  height: 7px;
+  background-color: rgb(255, 132, 0);
+  border-radius: 7px;
+}

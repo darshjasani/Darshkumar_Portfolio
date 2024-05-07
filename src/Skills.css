@@ -60,8 +60,50 @@
     font-size: 30px;
 }
 
+.checked{
+    color: orange;
+}
+.fa{
+    padding: 1px;
+}
+.halfchecked::before {
+    content: "\f089"; /* Unicode for the Font Awesome half-star icon */
+    color: orange; /* Color of the half-checked star */
+}
 
-
+.score {
+    display: block;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .score-wrap {
+    display: inline-block;
+    position: relative;
+    height: 19px;
+  }
+  
+  .score, .stars-active {
+    color: orange;
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .score, .stars-inactive {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    -webkit-text-stroke: initial;
+    /* overflow: hidden; */
+  }
+.skillLevel{
+    display: none;
+}
 .skillCard:nth-child(1) .skillLevel{
     background: rgba(0, 128, 0, 0.3);
     border-color: green;

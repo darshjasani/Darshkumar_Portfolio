@@ -5,9 +5,9 @@ import htmlImg from './images/html.png'
 import cssImg from './images/css.png'
 import jsImg from './images/js.png'
 import nodejsImg from './images/nodejs.png'
-import reactjsImg from './images/reactjs.png'
+import reactjsImg from './images/reactjs-1.jpg'
 import djangoImg from './images/django.png'
-import gitImg from './images/git.png'
+import gitImg from './images/git.jpg'
 import firebaseImg from './images/firebase.jpg'
 import javaImg from './images/java.jpg'
 import cImg from './images/c.png'
@@ -15,6 +15,7 @@ import pythonImg from './images/python.jpg'
 import sqlImg from './images/sql.jpg'
 import postgreImg from './images/postgres.jpg'
 import postmanImg from './images/postman.jpg'
+import mdbImg from './images/mongodb.jpg'
 import pandasImg from './images/pandas.jpg'
 import tfImg from './images/tensorflow.jpg'
 function Skills() {
@@ -28,6 +29,26 @@ function Skills() {
                     <img src={htmlImg} className='skillImg' alt = ''/>
                     <div className='skillLevel'>98%</div>
                     <h1 className='skillName'>HTML</h1>
+                    <div>
+                    {/* <span class="score">
+                        <div class="score-wrap">
+                            <span class="stars-active" style={{width:'88%'}}>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </span>
+                            <span class="stars-inactive">
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </span> */}
+                    </div>
                 </div>
 
                 <div className='skillCard'>
@@ -39,7 +60,7 @@ function Skills() {
                 <div className='skillCard'>
                     <img src={jsImg} className='skillImg' alt = ''/>
                     <div className='skillLevel'>98%</div>
-                    <h1 className='skillName'>JS</h1>
+                    <h1 className='skillName'>JavaScript</h1>
                 </div>
 
                 <div className='skillCard'>
@@ -103,9 +124,9 @@ function Skills() {
                 </div>
 
                 <div className='skillCard'>
-                    <img src={postmanImg} className='skillImg' alt = ''/>
+                    <img src={mdbImg} className='skillImg' alt = ''/>
                     <div className='skillLevel'>90%</div>
-                    <h1 className='skillName'>Postman</h1>
+                    <h1 className='skillName'>MongoDB</h1>
                 </div>
 
                 <div className='skillCard'>

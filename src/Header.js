@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.css'
-import img from './profile2.jpeg'
+import img from './profile.jpeg'
 import CircleIcon from '@mui/icons-material/Circle';
 
 function Header() {
