@@ -31,3 +31,9 @@ body:hover > #trailer{
   background-color: rgb(255, 132, 0);
   border-radius: 7px;
 }
+
+@media (max-width:768px) {
+  #trailer, #circle{
+    display: none;
+  }
+}

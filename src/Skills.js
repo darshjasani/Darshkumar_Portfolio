@@ -27,7 +27,7 @@ function Skills() {
 
                 <div className='skillCard'>
                     <img src={htmlImg} className='skillImg' alt = ''/>
-                    <div className='skillLevel'>98%</div>
+                    {/* <div className='skillLevel'>98%</div> */}
                     <h1 className='skillName'>HTML</h1>
                     <div>
                     {/* <span class="score">
@@ -53,91 +53,91 @@ function Skills() {
 
                 <div className='skillCard'>
                     <img src={cssImg} className='skillImg' alt = ''/>
-                    <div className='skillLevel'>98%</div>
+                    {/* <div className='skillLevel'>98%</div> */}
                     <h1 className='skillName'>CSS</h1>
                 </div>
 
                 <div className='skillCard'>
                     <img src={jsImg} className='skillImg' alt = ''/>
-                    <div className='skillLevel'>98%</div>
+                    {/* <div className='skillLevel'>98%</div> */}
                     <h1 className='skillName'>JavaScript</h1>
                 </div>
 
                 <div className='skillCard'>
                     <img src={nodejsImg} className='skillImg' alt = ''/>
-                    <div className='skillLevel'>90%</div>
+                    {/* <div className='skillLevel'>90%</div> */}
                     <h1 className='skillName'>Node.js</h1>
                 </div>
 
                 <div className='skillCard'>
                     <img src={reactjsImg} className='skillImg' alt = ''/>
-                    <div className='skillLevel'>90%</div>
+                    {/* <div className='skillLevel'>90%</div> */}
                     <h1 className='skillName'>React.js</h1>
                 </div>
 
                 <div className='skillCard'>
                     <img src={djangoImg} className='skillImg' alt = ''/>
-                    <div className='skillLevel'>85%</div>
+                    {/* <div className='skillLevel'>85%</div> */}
                     <h1 className='skillName'>Django</h1>
                 </div>
 
                 <div className='skillCard'>
                     <img src={gitImg} className='skillImg' alt = ''/>
-                    <div className='skillLevel'>90%</div>
+                    {/* <div className='skillLevel'>90%</div> */}
                     <h1 className='skillName'>Git/GitHub</h1>
                 </div>
 
                 <div className='skillCard'>
                     <img src={firebaseImg} className='skillImg' alt = ''/>
-                    <div className='skillLevel'>85%</div>
+                    {/* <div className='skillLevel'>85%</div> */}
                     <h1 className='skillName'>Firebase</h1>
                 </div>
 
                 <div className='skillCard'>
                     <img src={javaImg} className='skillImg' alt = ''/>
-                    <div className='skillLevel'>90%</div>
+                    {/* <div className='skillLevel'>90%</div> */}
                     <h1 className='skillName'>Java</h1>
                 </div>
 
                 <div className='skillCard'>
                     <img src={cImg} className='skillImg' alt = ''/>
-                    <div className='skillLevel'>98%</div>
+                    {/* <div className='skillLevel'>98%</div> */}
                     <h1 className='skillName'>C</h1>
                 </div>
 
                 <div className='skillCard'>
                     <img src={pythonImg} className='skillImg' alt = ''/>
-                    <div className='skillLevel'>90%</div>
+                    {/* <div className='skillLevel'>90%</div> */}
                     <h1 className='skillName'>Python</h1>
                 </div>
 
                 <div className='skillCard'>
                     <img src={sqlImg} className='skillImg' alt = ''/>
-                    <div className='skillLevel'>98%</div>
+                    {/* <div className='skillLevel'>98%</div> */}
                     <h1 className='skillName'>SQL</h1>
                 </div>
 
                 <div className='skillCard'>
                     <img src={postgreImg} className='skillImg' alt = ''/>
-                    <div className='skillLevel'>98%</div>
+                    {/* <div className='skillLevel'>98%</div> */}
                     <h1 className='skillName'>PostgreSQL</h1>
                 </div>
 
                 <div className='skillCard'>
                     <img src={mdbImg} className='skillImg' alt = ''/>
-                    <div className='skillLevel'>90%</div>
+                    {/* <div className='skillLevel'>90%</div> */}
                     <h1 className='skillName'>MongoDB</h1>
                 </div>
 
                 <div className='skillCard'>
                     <img src={tfImg} className='skillImg' alt = ''/>
-                    <div className='skillLevel'>85%</div>
+                    {/* <div className='skillLevel'>85%</div> */}
                     <h1 className='skillName'>Tensorflow</h1>
                 </div>
 
                 <div className='skillCard'>
                     <img src={pandasImg} className='skillImg' alt = ''/>
-                    <div className='skillLevel'>90%</div>
+                    {/* <div className='skillLevel'>90%</div> */}
                     <h1 className='skillName'>Pandas</h1>
                 </div>
 
