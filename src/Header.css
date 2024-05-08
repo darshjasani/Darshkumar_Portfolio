@@ -1,5 +1,6 @@
 #home{
   padding-bottom: 0px;
+  border-bottom: 1px solid white;
 }
 .point{
   color: white;
@@ -21,9 +22,8 @@
     display: flex;
     justify-content: space-between;
     padding-left: 30px;
-    padding-bottom: 30px;
+    
     padding-right: 30px;
-    border-bottom: 1px solid white;
 }
 
 .patterns {
@@ -66,6 +66,78 @@ svg text {
   opacity: 0; /* Initially hidden */
   animation: slideDown 2s ease forwards;
   border-radius: 50%;
+}
+
+.aboutMe{
+  color: white;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 15%;
+  
+}
+
+.aboutMe > div{
+  margin: 5px;
+}
+.headLine{
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+.expandBtn{
+  border: 0;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+.expandBtn > .MuiSvgIcon-root{
+  font-size: 30px;
+}
+
+.animate{
+  animation: rotate 1s linear;
+}
+
+.animate1{
+  animation: rotate1 1s linear;
+}
+
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate1 {
+  from{
+    transform: rotate(360deg);
+  }
+  to{
+    transform: rotate(0deg);
+  }
+}
+
+.col {
+  margin: 1px;
+  padding-left: 10px;
+  opacity: 0;
+  height: 0;
+  width: 90%;
+  
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+}
+
+.col.show {
+  opacity: 1;
+  height: 60px;
+  transition: all 1s ease-in-out;
 }
 
 /* Keyframes for the animation */
@@ -116,7 +188,15 @@ svg text {
     height: 100%;
     border-radius: 50%;
   }
-
+  .col{
+    font-size: 12px;
+  }
+  .col.show {
+    
+    opacity: 1;
+    height: 100px;
+    transition: all 1s ease-in-out;
+  }
   @keyframes textAnimate {
     0% {
       stroke-dasharray: 0 50%;
@@ -132,6 +212,7 @@ svg text {
     }   
 }
 }
+
 
 @media (min-width:1600px) {
   .profileImage{
