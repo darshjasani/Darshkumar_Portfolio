@@ -9,7 +9,7 @@ function Contact() {
         if(a){
             window.location.href = "https://www.linkedin.com/in/darsh-jasani/";
         }
-    }
+    } 
   return (
     <>
         <div className='point'><CircleIcon/> Contact me</div>
