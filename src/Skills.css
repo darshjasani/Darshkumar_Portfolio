@@ -1,0 +1,154 @@
+.skillsBody {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border-bottom: 1px solid white;
+    background-image: url('./images/skills_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+.skillContainer {
+    text-align: center;
+    color: #ffffff;
+}
+
+.skillTitle {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+    color: #ffffff;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.skill {
+    background-color: #030303;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    box-shadow: rgba(221, 220, 220, 0.25) 0px 30px 60px -12px inset, rgba(221, 220, 220, 0.25) 0px 18px 36px -18px inset;
+}
+
+.skill i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill span {
+    font-size: 1rem;
+}
+
+
+/* mobile devices */
+@media (max-width: 768px) {
+    .skillTitle {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        margin-top: 1rem;
+    }
+    .skills {
+        grid-template-columns: repeat(2,1fr);
+        flex-wrap: wrap;
+        gap: 0.55rem;
+    }
+    .skill {
+        width: 80px;
+        height: 80px;
+    }
+    .skill i {
+        font-size: 1.75rem;
+    }
+    .skill span {
+        font-size: 1.2rem;
+    }
+}
+
+/* ipads */
+@media (min-width: 768px) and (max-width:1024px) {
+    .skillTitle {
+        font-size: 3.5rem;
+        margin-bottom: 0rem;
+    }
+    .skills {
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin: 2rem;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .skill {
+        width: 140px;
+        height: 140px;
+        
+    }
+    .skill i {
+        font-size: 3.5rem;
+    }
+    .skill span {
+        font-size: 1.85rem;
+    }
+}
+
+/* laptop*/
+@media (min-width: 1600px) {
+    .skillTitle {
+        font-size: 5.5rem;
+    }
+    .skills {
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin: 2rem;
+    }
+    .skill {
+        width: 150px;
+        height: 150px;
+        
+    }
+    .skill i {
+        font-size: 3.5rem;
+    }
+    .skill span {
+        font-size: 1.85rem;
+    }
+}
+
+/* large screen*/
+@media (min-width: 2490px) {
+    .skillTitle {
+        font-size: 7.5rem;
+    }
+    .skills {
+        flex-wrap: wrap;
+        gap: 3.5rem;
+        margin: 3rem;
+    }
+    .skill {
+        width: 300px;
+        height: 300px;
+        border-radius: 1rem;
+    }
+    .skill i {
+        font-size: 5.5rem;
+    }
+    .skill span {
+        font-size: 2.85rem;
+    }
+}

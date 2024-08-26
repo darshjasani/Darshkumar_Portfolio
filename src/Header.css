@@ -1,0 +1,292 @@
+/* Container for the entire header section */
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh; /* Full height of the viewport */
+  padding: 0;
+  border-bottom: 1px solid white;
+  background-image: url('./images/bg_image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+.head_name,
+.head_desc {
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.head_name {
+  font-size: 50px;
+}
+
+.head_desc {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+
+/* Adjust the social links container to be centered vertically */
+.first-component {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+.icon-container {
+  position: relative;
+  color: white;
+}
+
+.icon {
+  position: relative;
+}
+
+.notification {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 90vw; /* Change width to a percentage */
+  max-width: 760px; /* Ensure it doesn't get too large on big screens */
+  text-align: justify;
+  background-color: #33333379;
+  color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 10;
+  font-size: 25px;
+}
+
+.icon-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Container for the scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5px;
+}
+
+.scroll {
+  width: 8px;
+  height: 8px;
+  background-color: #fff; /* White dot for dark backgrounds */
+  border-radius: 50%;
+  animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+}
+
+/* mobile devices */
+@media (max-width: 768px) {
+  #home {
+    padding: 0;
+    height: 90vh;
+    background-attachment: scroll;
+  }
+
+  .head_name {
+    font-size: 32px;
+  }
+
+  .head_desc {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 0 15px;
+  }
+
+  .first-component{
+    display: none;
+  }
+
+  .scroll-indicator {
+    bottom: 10px;
+    width: 16px;
+    height: 32px;
+  }
+
+  .scroll {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+/* ipad */
+@media (min-width: 768px) and (max-width:1024px){
+  #home{
+    height: 93vh;
+  }
+
+  .head_name {
+    font-size: 48px;
+  }
+
+  .head_desc {
+    padding: 20px;
+    font-size: 28px;
+  }
+
+  .tooltip-text {
+    left: 0%;
+    transform: translateX(5%) translateY(-0%);
+
+  }
+
+  .social-icon{
+    font-size: 30px;
+  }
+
+  .scroll-indicator{
+    width: 30px;
+    height: 60px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+  }
+}
+
+/* laptop */
+@media (min-width : 1600px) {
+  #home{
+    height: 92vh;
+  }
+  
+  .head_name{
+    font-size: 70px;
+  }
+
+  .head_desc{
+    font-size: 50px;
+  }
+
+  .social-icon{
+    font-size: 40px;
+  }
+
+  .notification{
+    font-size: 18px;
+
+  }
+  .tooltip-text{
+    font-size: 35px;
+    transform: translateY(-0%) translateX(5%);
+    max-width: 1000px;
+  }
+}
+
+/* large screen */
+@media (min-width : 2490px) {
+  #home{
+    height: 95vh;
+  }
+  .head_name{
+    font-size: 100px;
+  }
+
+  .head_desc{
+    font-size: 80px;
+  }
+
+  .social-icon{
+    font-size: 70px;
+  }
+
+  .notification{
+    font-size: 30px;
+    
+  }
+  .tooltip-text{
+    font-size: 60px;
+    transform: translateY(-0%) translateX(6%);
+    max-width: 1750px;
+  }
+
+  .scroll-indicator{
+    width: 40px;
+    height: 80px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(75px);
+      opacity: 0;
+    }
+  }
+}

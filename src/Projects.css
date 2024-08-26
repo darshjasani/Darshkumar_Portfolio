@@ -1,0 +1,327 @@
+.pBody{
+    color: white;
+    border-bottom: 1px solid white;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+.ptitle{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+}
+
+.pDesc{
+    padding-top: 30px;
+    padding-left: 50px;
+    font-size: 90px;
+    width: 600px;
+    height: 100px;
+}
+
+.ptitle > .MuiSvgIcon-root{
+    font-size: 20px;
+}
+
+.cardsBody{
+    position: relative;
+   display: block;
+    width: 90%;
+    height: 80%;
+    padding: 30px;
+}
+
+.cardBody:nth-child(odd){
+    margin-left: auto;
+    margin-right: 50px;
+    margin-top: -60px;
+}
+
+.cardBody:nth-child(even){
+    margin-top: -400px;
+}
+.cardBody:nth-child(4){
+    margin-bottom: 100px;
+}
+
+.cardBody{
+    width: 500px;
+    height: 700px;
+    background-color: rgb(28, 31, 35);
+    transition: opacity 0.7s ease-in;
+    border-radius: 5px;
+}
+
+.fadeOut{
+    opacity: 0;
+}
+
+.fadeIn{
+    opacity: 1;
+}
+
+.cardBody > img{
+    width: 500px;
+    height: 450px;
+    aspect-ratio: 1;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.cTitle{
+    margin: 20px;
+    font-size: 30px;
+    margin-left: 25px;
+}
+
+.cDesc{
+    margin: 20px;
+    font-size: 20px;
+    opacity: 0.8;
+    margin-left: 25px;
+}
+
+.cLink{
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    background-color: blueviolet;
+    width: 40px;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 1.5s ease-in-out;
+    border-bottom-right-radius: 5px;
+}
+
+.cLink > .MuiSvgIcon-root{
+    font-size: 30px;
+}
+
+.cardBody:hover{
+    cursor: pointer;
+    scale: 1.05;
+
+    .cTitle{
+       color: rgb(59, 239, 218);
+       margin-left: 40px;
+    }
+    .cDesc{
+        opacity: 1;
+    }
+    .cLink{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.btnBody{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: -200px;
+    margin-right: 200px;
+}
+
+.allProjects{
+    opacity: 0.8;
+    font-size: 20px;
+    color: white;
+    border: 1px solid blueviolet;
+    background-color: transparent;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.allProjects:hover{
+    opacity: 1;
+    background-color: blueviolet;
+    box-shadow: rgba(138,43,226, 0.1) 0px 8px 24px, rgba(138,43,226, 0.1) 0px 16px 56px, rgba(138,43,226, 0.1) 0px 24px 80px;
+}
+
+.fadeOut {
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  
+  .fadeOut.inview2 {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+  
+  .fadeOut.inview2:nth-child(1) {
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+  }
+  
+  .fadeOut.inview2:nth-child(2) {
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  
+  .fadeOut.inview2:nth-child(3) {
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+  }
+  
+  .fadeOut.inview2:nth-child(4) {
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
+  }
+
+  @media (max-width:768px){
+    .pBody{
+        color: white;
+        border-bottom: 1px solid white;
+        padding: 10px;
+        height: 310vh;
+    }
+    .pDesc{
+        padding: 50px;
+        font-size: 40px;
+        width: 300px;
+        height: 100px;
+    }
+
+    
+    .cardsBody{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardBody:nth-child(odd){
+        margin-left:0;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .cardBody:nth-child(even){
+        margin-top: 0px;
+    }
+    .cardBody:nth-child(4){
+        margin-bottom: 100px;
+    }
+
+    .cardBody{
+        width: 300px;
+        height: 530px;
+        background-color: rgb(28, 31, 35);
+        transition: opacity 0.7s ease-in;
+        margin: 10px 0;
+    }
+
+    .cardBody > img{
+        width: 300px;
+        height: 350px;
+        aspect-ratio: 1;
+    }
+        
+    .btnBody{
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: -65px;
+        margin-right: 0px;
+    }
+
+    .allProjects{
+        opacity: 0.8;
+        font-size: 15px;
+        color: white;
+        border: 1px solid blueviolet;
+        background-color: transparent;
+        padding: 20px;
+        cursor: pointer;
+    }
+
+    .cTitle{
+        margin: 10px;
+        font-size: 20px;
+        margin-left: 25px;
+    }
+    
+    .cDesc{
+        margin: 10px;
+        font-size: 13px;
+        opacity: 0.8;
+        margin-left: 25px;
+    }
+    
+    .cLink{
+        position: absolute;
+        right: 0%;
+        bottom: 0%;
+        background-color: blueviolet;
+        width: 40px;
+        height: 40px;
+        padding-top: 10px;
+        padding-left: 10px;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 1.5s ease-in-out;
+        border-bottom-right-radius: 5px;
+    }
+    
+    .cLink > .MuiSvgIcon-root{
+        font-size: 30px;
+    }
+
+    .allProjects{
+        position: relative;
+        left: 0;
+        margin-top: 10px;
+    }
+    
+  }
+
+  /* @media (min-width:1400px){
+    .pBody{
+        color: white;
+        border-bottom: 1px solid white;
+        padding: 10px;
+        height: 230vh;
+    }
+   
+    .cardBody{
+        width: 500px;
+        height: 700px;
+        position: absolute;
+        left:55%;
+        top:205%;
+        background-color: rgb(28, 31, 35);
+        transition: opacity 0.7s ease-in;
+    }
+
+    .cardBody1{
+        left:10%;
+        top:245%
+    }
+    
+    .cardBody2{
+        left:55%;
+        top:290%
+    }
+    
+    .cardBody3{
+        left: 10%;
+        top:330%
+    }
+
+    .allProjects{
+       
+        
+        left:60%;
+        top:375%;
+        
+    }
+  } */
+  
+
+  
