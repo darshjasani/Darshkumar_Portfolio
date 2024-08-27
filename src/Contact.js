@@ -39,32 +39,37 @@ function Contact() {
         </div> */}
 
         <div class="connect-container">
-        <h1>Connect With Me</h1>
-        <div class="connect-social-links">
-            <a href="#" class="connect-social-link github">
-                Github
-                <i class="fab fa-github fa-fade"></i>   
-            </a>
-            <a href="#" class="connect-social-link linkedin">
-                LinkedIn
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            <a href="#" class="connect-social-link slack">
-                Slack
-                <i class="fab fa-slack"></i>
-                
-            </a>
-            <a href="#" class="connect-social-link discord">
-                Discord
-                <i class="fab fa-discord"></i>
-                
-            </a>
-        </div>
-        <a href="#" class="mail-button">
-        Shoot me a Mail &nbsp;&nbsp;
-        <i class="fas fa-envelope fa-bounce mail"></i>
-        </a>
+        
+            <h1>Connect With Me</h1>
+            
+            <div class="connect-social-links">
+                <a href="https://github.com/darshjasani" class="connect-social-link github">
+                    Github
+                    <i class="fab fa-github fa-fade"></i>   
+                </a>
+                <a href="https://www.linkedin.com/in/darsh-jasani" class="connect-social-link linkedin">
+                    LinkedIn
+                    <i class="fab fa-linkedin"></i>
+                    
+                </a>
+                <a href="https://codepath.slack.com/team/U07431HEWKU" class="connect-social-link slack">
+                    Slack
+                    <i class="fab fa-slack"></i>
+                    
+                </a>
+                <a href="https://discordapp.com/users/darshjasani" class="connect-social-link discord">
+                    Discord
+                    <i class="fab fa-discord"></i>
+                    
+                </a>
+            </div>
+
+            <div>
+                <a href="#" class="mail-button">
+                Shoot me a Mail &nbsp;&nbsp;
+                <i class="fas fa-envelope mail"></i>
+                </a>
+            </div>
     </div>
     </>
   )
