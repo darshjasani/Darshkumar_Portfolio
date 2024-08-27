@@ -47,7 +47,7 @@ function Navbar() {
                   <li><a href="#home" onClick={()=>{setDisplay(false)}}>Home</a></li>
                   <li><a href="#experience" onClick={()=>{setDisplay(false)}}>Experience</a></li>
                   <li><a href="#projects" onClick={()=>{setDisplay(false)}}>Projects</a></li>
-                  <li><a className="hireMe" onClick={clickBtn}>Contacts</a></li>
+                  <li><a className="hireMe" onClick={clickBtn}>Contact</a></li>
                 </ul>
             </div>
     </>

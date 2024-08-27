@@ -23,7 +23,7 @@ function Skills() {
     <>
         <div className='skillsBody'>
             <div class="skillContainer">
-                 <h1 class="skillTitle">Tooling</h1>
+                 <h1 class="skillTitle">Skills</h1>
                     <div className='skillsList'>
                         <div class="skills">
                             <div class="skill"> <i class="fab fa-react"></i> <span>React</span> </div>
