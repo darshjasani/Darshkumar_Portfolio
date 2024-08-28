@@ -6,7 +6,7 @@ function Experience() {
   return (
     <>
         <div className='eBody' id="experience">
-            <div className='etitle'><CircleIcon/> Experience</div>
+            <div className='etitle'>Experience</div>
             <div className='timeline'>
               <div className='expCard'>
                   <div className='expCardBody'>

@@ -2,13 +2,23 @@
     color: white;
     border-bottom: 1px solid white;
     padding: 10px;
+    border-bottom: 1px solid white;
+    background-image: url('./images/experience-bg2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 0;
 }
 
 .etitle{
     display: flex;
     align-items: center;
-    gap: 5px;
-    font-size: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 50px;
+    padding: 20px;
 }
 .etitle > .MuiSvgIcon-root{
     font-size: 20px;
@@ -130,26 +140,27 @@
     padding: 5px;
 }
 
-@media (max-width:768px) {
+@media (max-width:400px) {
     .timeline{
-        width: 90%;
+        width: 100%;
     }
 
     .expCard{
         width: 45%;
+        height: 43vh;
         padding: 0px;
         border-radius: 10px;
         color: white;
         display: block;
-        margin: -151px 0px;
+        margin: -161px 0px;
         position: relative;
         background-color: red;
         cursor: pointer; 
     }
 
     .cardPosition{
-        font-size: 16px;
-        font-weight: 500;
+        font-size: 18px;
+        font-weight: 400;
         margin-bottom: -5px;
     }
     .cardTitle{
@@ -162,11 +173,12 @@
         padding: 15px;
     }
     .cardDetail > li{
-        font-size: 10px;
+        font-size: 0.58rem;
         padding: 0;
         padding-bottom: 10px;
         width: auto;
         height: 90px;
+        text-align: left;
     }
 
     .expCard:nth-child(even)::before{
@@ -227,12 +239,329 @@
         border: 1px dashed white;
         z-index: -1;
     }
+}
+
+@media (min-width : 400px ) and (max-width:768px) {
+    .timeline{
+        width: 100%;
+    }
+
+    .expCard{
+        width: 45%;
+        height: 36vh;
+        padding: 0px;
+        border-radius: 10px;
+        color: white;
+        display: block;
+        margin: -151px 0px;
+        position: relative;
+        background-color: red;
+        cursor: pointer; 
+    }
+
+    .cardPosition{
+        font-size: 19px;
+        font-weight: 400;
+        margin-bottom: -5px;
+    }
+    .cardTitle{
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: -10px;
+    }
+    .cardDetail{
+        padding: 15px;
+    }
+    .cardDetail > li{
+        font-size: 0.65rem;
+        padding: 0;
+        padding-bottom: 10px;
+        width: auto;
+        height: 90px;
+        text-align: left;
+    }
+
+    .expCard:nth-child(even)::before{
+        content: '';
+        position: absolute;
+        left: -15%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        border: 3px solid black;
+        border-radius: 50%;
+    }
+    
+    .expCard:nth-child(even)::after{
+        content: '';
+        position: absolute;
+        left: -8%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 7%;
+        height: 2px;
+        background-color: white;
+        z-index: -1;
+    }
+
+    .expCard:nth-child(odd)::before{
+        content: '';
+        position: absolute;
+        right : -16%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 50%;
+    }
+    
+    .expCard:nth-child(odd)::after{
+        content: '';
+        position: absolute;
+        right: -8%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 7%;
+        height: 2px;
+        background-color: white;
+        z-index: -1;
+    }
+    
+    .expCard:nth-child(even) .expCardBody::before{
+        content: '';
+        position: absolute;
+        left: -11%;
+        top:0;
+        width: 0px;
+        height: 100%;
+        border: 1px dashed white;
+        z-index: -1;
+    }
  
+}
+
+@media (min-width:768px) and (max-width:1024px){
+    .timeline{
+        width: 100%;
+    }
+    .expCard{
+        margin: -171px 0px;
+        height: 28vh;
+    }
+    .cardPosition{
+        font-size: 23px;
+        font-weight: 500;
+        margin-bottom: -5px;
+    }
+    .cardTitle > p {
+        font-size: 15px;
+    }
+    .cardDetail{
+        font-size: 15px;
+    }
+    .expCard:nth-child(even) .expCardBody::before{
+        left: -10.5%;
+    }
+    .expCard:nth-child(even)::before{
+        content: '';
+        position: absolute;
+        left: -16.4%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        border: 5px solid black;
+        border-radius: 50%;
+    }
+    
+    .expCard:nth-child(even)::after{
+        content: '';
+        position: absolute;
+        left: -10%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 15%;
+        height: 2px;
+        background-color: white;
+        z-index: -1;
+    }
+    
+    .expCard:nth-child(odd)::before{
+        content: '';
+        position: absolute;
+        right : -16.4%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        border: 3px solid rgb(0, 0, 0);
+        border-radius: 50%;
+    }
+    
+    .expCard:nth-child(odd)::after{
+        content: '';
+        position: absolute;
+        right: -12.5%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 15%;
+        height: 2px;
+        background-color: white;
+        z-index: -1;
+    }
+    
+}
+
+@media (min-width:900px) and (max-width:1024px){
+    .timeline{
+        width: 100%;
+    }
+    .expCard{
+        margin: -141px 0px;
+        height: 25vh;
+    }
+    .cardPosition{
+        font-size: 25px;
+        font-weight: 500;
+        margin-bottom: -5px;
+    }
+    .cardTitle > p {
+        font-size: 15px;
+    }
+    .cardDetail{
+        font-size: 15px;
+    }
+    .expCard:nth-child(even) .expCardBody::before{
+        left: -12%;
+    }
+    .expCard:nth-child(even)::before{
+        content: '';
+        position: absolute;
+        left: -17%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        border: 5px solid black;
+        border-radius: 50%;
+    }
+    
+    .expCard:nth-child(even)::after{
+        content: '';
+        position: absolute;
+        left: -10%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 15%;
+        height: 2px;
+        background-color: white;
+        z-index: -1;
+    }
+    
+    .expCard:nth-child(odd)::before{
+        content: '';
+        position: absolute;
+        right : -17.4%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        border: 3px solid rgb(0, 0, 0);
+        border-radius: 50%;
+    }
+    
+    .expCard:nth-child(odd)::after{
+        content: '';
+        position: absolute;
+        right: -12.5%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 15%;
+        height: 2px;
+        background-color: white;
+        z-index: -1;
+    }
+    
+}
+
+@media (min-width:1000px) and (max-width:1024px){
+    .timeline{
+        width: 100%;
+    }
+    .expCard{
+        margin: -131px 0px;
+        height: 20vh;
+    }
+    .cardPosition{
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: -5px;
+    }
+    .cardTitle > p {
+        font-size: 15px;
+    }
+    .cardDetail{
+        font-size: 15px;
+    }
+    .expCard:nth-child(even) .expCardBody::before{
+        left: -14%;
+    }
+    .expCard:nth-child(even)::before{
+        content: '';
+        position: absolute;
+        left: -18.4%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        border: 5px solid black;
+        border-radius: 50%;
+    }
+    
+    .expCard:nth-child(even)::after{
+        content: '';
+        position: absolute;
+        left: -10%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 15%;
+        height: 2px;
+        background-color: white;
+        z-index: -1;
+    }
+    
+    .expCard:nth-child(odd)::before{
+        content: '';
+        position: absolute;
+        right : -17.6%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        border: 3px solid rgb(0, 0, 0);
+        border-radius: 50%;
+    }
+    
+    .expCard:nth-child(odd)::after{
+        content: '';
+        position: absolute;
+        right: -12.5%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 15%;
+        height: 2px;
+        background-color: white;
+        z-index: -1;
+    }
+    
 }
 
 @media (min-width:1600px){
     .timeline{
-        width: 75%;
+        width: 85%;
     }
     .expCard{
         margin: -101px 0px;
@@ -243,12 +572,12 @@
     .expCard:nth-child(even)::before{
         content: '';
         position: absolute;
-        left: -20.5%;
+        left: -21.4%;
         top:50%;
         transform: translateY(-50%);
         width: 35px;
         height: 35px;
-        border: 5px solid black;
+        border: 10px solid black;
         border-radius: 50%;
     }
     
@@ -289,53 +618,74 @@
     }
 }
 
-@media (max-width:375px) {
-    .eBody{
-        padding: 5px;
-    }
+@media (min-width:2490px){
     .timeline{
-        width: 95%;
+        width: 75%;
     }
     .expCard{
-        width: 50%;
-        padding: 0px;
-        border-radius: 10px;
-        color: white;
-        display: block;
-        margin: -151px 0px;
-        position: relative;
-        background-color: red;
-        cursor: pointer; 
+        margin: -161px 0px;
+        height: 22vh;
     }
-
-    .cardDetail > li{
-        font-size: 10px;
-        padding: 2px;
-        padding-bottom: 10px;
-        width: auto;
-        height: 90px;
-        
-        
+    .cardPosition{
+        font-size: 55px;
+        font-weight: 500;
+        margin-bottom: -5px;
     }
-
+    .cardTitle > p{
+        font-size: 25px;
+    }
+    .cardDetail{
+        font-size: 25px;
+    }
+    .expCard:nth-child(even) .expCardBody::before{
+        left: -19%;
+        border: 2px dashed white;
+    }
     .expCard:nth-child(even)::before{
-        display: none;
-        margin-left: 5px;
+        content: '';
+        position: absolute;
+        left: -23.6%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 55px;
+        height: 55px;
+        border: 10px solid black;
+        border-radius: 50%;
     }
     
     .expCard:nth-child(even)::after{
-        display: none;
+        content: '';
+        position: absolute;
+        left: -13%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 9%;
+        height: 3px;
+        background-color: white;
+        z-index: -1;
     }
-
+    
     .expCard:nth-child(odd)::before{
-        display: none;
+        content: '';
+        position: absolute;
+        right : -22.5%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 55px;
+        height: 55px;
+        border: 5px solid rgb(0, 0, 0);
+        border-radius: 50%;
     }
     
     .expCard:nth-child(odd)::after{
-        display: none;
-    }
-    
-    .expCard:nth-child(even) .expCardBody::before{
-        display: none;
+        content: '';
+        position: absolute;
+        right: -12.5%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 9%;
+        height: 3px;
+        background-color: white;
+        z-index: -1;
     }
 }

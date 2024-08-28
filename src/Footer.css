@@ -3,51 +3,10 @@
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     border-bottom: 1px solid white;
     background-color: rgb(24, 24, 24);
 }
-
-.footerStart{
-    display: flex;
-    align-items: center;
-    gap:10px;
-}
-
-.footerStart > .MuiSvgIcon-root{
-    font-size: 20px;
-}
-.footerEnd{
-    display: flex;
-    align-items: center;
-    padding-right: 10px;
-}
-
-.footerEnd > div{
-    margin: 15px;
-}
-
-.flinks{
-    cursor: pointer;
-    position: relative;
-}
-
-.flinks::after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    left: 2px;
-    bottom: -2px;
-    width: 0;
-    background-color: white;
-    transition: width 0.6s;
-}
-
-.flinks:hover:after{
-    width: 95%;
-    cursor: pointer;
-}
-
 
 @media (max-width:768px) {
     .footerBody{
@@ -58,24 +17,16 @@
         gap:3px;
         font-size: 10px;
     }
-    
-    .footerStart > .MuiSvgIcon-root{
-        font-size: 10px;
+}
+
+@media (min-width:1600px) {
+    .footerStart{
+        font-size: 25px;
     }
-    .footerEnd{
-        display: flex;
-        align-items: center;
-        padding-right: 10px;
-    }
-    
-    .footerEnd > div{
-        margin: 2px;
-        font-size: 10px;
-    }
-    
-    .footerEnd > .flinks:hover{
-        opacity: 0.8;
-        cursor: pointer;
-        text-decoration: underline;
+}
+
+@media (min-width:2490px) {
+    .footerStart{
+        font-size: 30px;
     }
 }

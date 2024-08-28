@@ -3,7 +3,7 @@
     color: white;
 }
 
-h1 {
+.connect-container > h1 {
     text-align: center;
     color: #f5f7f5;
     text-shadow: 0 0 10px #bfc1bf;
