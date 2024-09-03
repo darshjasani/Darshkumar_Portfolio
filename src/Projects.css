@@ -26,7 +26,7 @@
 
 .cardsBody{
     position: relative;
-   display: block;
+    display: block;
     width: 90%;
     height: 80%;
     padding: 30px;
@@ -41,6 +41,7 @@
 .cardBody:nth-child(even){
     margin-top: -400px;
 }
+
 .cardBody:nth-child(4){
     margin-bottom: 100px;
 }
@@ -59,14 +60,6 @@
 
 .fadeIn{
     opacity: 1;
-}
-
-.cardBody > img{
-    width: 500px;
-    height: 450px;
-    aspect-ratio: 1;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
 }
 
 .cTitle{
@@ -324,4 +317,156 @@
   } */
   
 
+/* 
+=========================
+Fonts
+=========================
+
+font-family: 'Outfit', sans-serif;
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* 
+========================
+Variables
+========================
+*/
+
+:root {
+    font-size: 15px;
+    
+    /* Primary */
+    --var-soft-blue: hsl(215, 51%, 70%);
+    --var-cyan: hsl(178, 100%, 50%);
+    
+    /* Neutral */
+    --var-main-darkest: hsl(217, 54%, 11%);
+    --var-card-dark: hsl(216, 50%, 16%);
+    --var-line-dark: hsl(215, 32%, 27%);
+    --var-lightest: white;
+    
+    /* Fonts */
+    --var-heading: normal normal 600 1.5em/1.6em 'Outfit', sans-serif;
+    --var-small-heading: normal normal 400 1em/1em 'Outfit', sans-serif;
+    --var-para: normal normal 300 1em/1.55em 'Outfit', sans-serif;
+}
+
+/* 
+=======================
+Setup
+=======================
+*/
+
+
+
+/* Image and link styles */
+.exp-hero-image {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+.exp-hero-image.eye {
+    position: absolute;
+    width: 100%;
+    max-width: 2em;
+    top: 44%;
+    left: 43%;
+}
+
+.exp-title-link, .exp-creator-link, .exp-attribution-link {
+    color: inherit;
+}
+
+/* Font Styling */
+.exp-title {
+    font: var(--var-heading);
+    color: var(--var-lightest);
+    padding-top: 1.2em;
+}
+
+.exp-description {
+    font: var(--var-para);
+    color: var(--var-soft-blue);
+    padding-bottom: 1em;
+}
+
+.exp-price {
+    font: var(--var-small-heading);
+    color: var(--var-lightest);
+}
+
+.exp-time-text {
+    font: var(--var-para);
+    color: var(--var-soft-blue);
+}
+
+.exp-creator {
+    font: var(--var-para);
+    color: var(--var-soft-blue);
+}
+
+/* Class-based styles */
+.exp-card-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 2em auto;
+    background-color: var(--var-card-dark);
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    padding: 2rem;
+}
+
+.exp-flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exp-coin-base, .exp-time-left, .exp-card-attribute {
+    display: flex;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.exp-card-attribute {
+    padding-bottom: 1.5em;
+    border-top: 2px solid var(--var-line-dark);
+}
+
+.exp-hero-image-container {
+    position: relative;
+    display: block;
+}
+
+
+.exp-skill-box {
+    display: flex;
+    gap: 10px; /* Space between each skill */
+    justify-content: center; /* Center the skills horizontally */
+    align-items: center; /* Center the skills vertically */
+}
   
+.exp-skill {
+padding: 5px 10px;
+background-color: var(--var-card-dark); /* Dark background for each skill */
+color: var(--var-lightest); /* Light text color */
+font-size: 14px;
+border: 2px solid hsl(215, 84%, 52%);
+border-radius: 4px;
+font-weight: 600; /* Slightly bolder text */
+position: relative;
+
+/* Inner border radius to keep content inside */
+border-radius: 8px;
+}
+  
+
+  
+@media (min-width:600px) {
+    .exp-page-wrapper {
+        font-size: 18px;
+    }
+}

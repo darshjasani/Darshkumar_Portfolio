@@ -32,52 +32,90 @@ function Projects() {
             <div className='ptitle'><CircleIcon/>Projects</div>
             <div className='pDesc'>Work that I've done for the past 4 years</div>
             <div className='cardsBody'>
-                <div className='cardBody fadeOut' onClick={()=>{window.location.href = 'https://github.com/darshjasani/ChatHub'}}>
-                        <img src={chatimg}/>
-                        <div className='cTitle'>
-                            Chat Application
+                <div class="exp-page-wrapper fadeOut" onClick={()=>{window.location.href = 'https://github.com/darshjasani/ChatHub'}}>
+                    <div class="exp-card-container">
+                        <a href="" class="exp-hero-image-container">
+                            <img class="exp-hero-image" src={chatimg} alt="Spinning glass cube"/>
+                        </a>
+                        <main class="exp-main-content">
+                            <h1 class="exp-title"><a href="#" class="exp-title-link">Chat Application</a></h1>
+                            <p class="exp-description">A feature-rich real-time chat application with Google authentication, infinite scroll, room creation, profile customization, and secure login functionality, providing users with a seamless and interactive messaging experience using ReactJS anf Firebase.</p>
+                            
+                        </main>
+                        <div class="exp-skill-box">
+                            <span class="exp-skill">HTML</span>
+                            <span class="exp-skill">CSS</span>
+                            <span class="exp-skill">JS</span>
+                            <span class="exp-skill">React</span>
                         </div>
-                        <div className='cDesc'>
-                        A feature-rich real-time chat application with Google authentication, infinite scroll, room creation, profile customization, and secure login functionality, providing users with a seamless and interactive messaging experience using ReactJS anf Firebase.
+
                         </div>
-                        <div className='cLink'><CallMadeIcon/></div>
+                    
                 </div>
 
-                <div className='cardBody cardBody1 fadeOut' onClick={()=>{window.location.href = 'https://github.com/darshjasani/BugHound' }}>
-                        <img src={bugimg}/>
-                        <div className='cTitle'>
-                            Bughound Bug Tracking Software
+                <div class="exp-page-wrapper fadeOut cardBody1" onClick={()=>{window.location.href = 'https://github.com/darshjasani/BugHound'}}>
+                    <div class="exp-card-container">
+                        <a href="" class="exp-hero-image-container">
+                            <img class="exp-hero-image" src={bugimg} alt="Spinning glass cube"/>
+                        </a>
+                        <main class="exp-main-content">
+                            <h1 class="exp-title"><a href="#" class="exp-title-link">Bughound Bug Tracking Software</a></h1>
+                            <p class="exp-description">Bughound is a secure, web-based bug recording and tracking software designed for testing and verifying product functionality. The project is a scaled-back version of a previous product developed for a company in Bellevue, WA.</p>
+                            
+                        </main>
+                        <div class="exp-skill-box">
+                            <span class="exp-skill">HTML</span>
+                            <span class="exp-skill">CSS</span>
+                            <span class="exp-skill">JS</span>
+                            <span class="exp-skill">React</span>
                         </div>
-                        <div className='cDesc'>
-                        Bughound is a secure, web-based bug recording and tracking software designed for testing and verifying product functionality. The project is a scaled-back version of a previous product developed for a company in Bellevue, WA.
+
                         </div>
-                        <div className='cLink'><CallMadeIcon/></div>
+                    
                 </div>
 
-                <div className='cardBody cardBody2 fadeOut' onClick={()=>{window.location.href = 'https://github.com/darshjasani/WeatherWebApp' }}>
-                        <img src={weatherimg}/>
-                        <div className='cTitle'>
-                            Weather Forecast
+                <div class="exp-page-wrapper fadeOut cardBody2" onClick={()=>{window.location.href = 'https://github.com/darshjasani/WeatherWebApp'}}>
+                    <div class="exp-card-container">
+                        <a href="" class="exp-hero-image-container">
+                            <img class="exp-hero-image" src={weatherimg} alt="Spinning glass cube"/>
+                        </a>
+                        <main class="exp-main-content">
+                            <h1 class="exp-title"><a href="#" class="exp-title-link">Weather Forecast</a></h1>
+                            <p class="exp-description">Seamless integration of the OpenWeatherMap API within a React application, showcasing the retrieval and presentation of real-time weather data for any location across the globe. Enhanced with bespoke CSS styling, users can access and interpret weather information effortlessly.</p>
+                            
+                        </main>
+                        <div class="exp-skill-box">
+                            <span class="exp-skill">HTML</span>
+                            <span class="exp-skill">CSS</span>
+                            <span class="exp-skill">JS</span>
+                            <span class="exp-skill">React</span>
                         </div>
-                        <div className='cDesc'>
-                        Seamless integration of the OpenWeatherMap API within a React application, showcasing the retrieval and presentation of real-time weather data for any location across the globe. Enhanced with bespoke CSS styling, users can access and interpret weather information effortlessly.
+
                         </div>
-                        <div className='cLink'><CallMadeIcon/></div>
+                    
                 </div>
 
-                <div className='cardBody cardBody3 fadeOut' onClick={()=>{window.location.href = 'https://github.com/darshjasani/Movie-Recommender' }}>
-                        <img src={movieimg}/>
-                        <div className='cTitle'>
-                            Movie Recommendation Model
+                <div class="exp-page-wrapper fadeOut cardBody3" onClick={()=>{window.location.href = 'https://github.com/darshjasani/Movie-Recommender'}}>
+                    <div class="exp-card-container">
+                        <a href="" class="exp-hero-image-container">
+                            <img class="exp-hero-image" src={movieimg} alt="Spinning glass cube"/>
+                        </a>
+                        <main class="exp-main-content">
+                            <h1 class="exp-title"><a href="#" class="exp-title-link">Movie Recommendation Model</a></h1>
+                            <p class="exp-description">The project focuses on collaborative filtering to recommend movies, optimizing parameters through gradient descent, validating accuracy using numerical gradients, and analyzing a dataset with user ratings ranging from 1 to 5.</p>
+                            
+                        </main>
+                        <div class="exp-skill-box">
+                            <span class="exp-skill">HTML</span>
+                            <span class="exp-skill">CSS</span>
+                            <span class="exp-skill">JS</span>
+                            <span class="exp-skill">React</span>
                         </div>
-                        <div className='cDesc'>
-                        The project focuses on collaborative filtering to recommend movies, optimizing parameters through gradient descent, validating accuracy using numerical gradients, and analyzing a dataset with user ratings ranging from 1 to 5.
+
                         </div>
-                        <div className='cLink'><CallMadeIcon/></div>
+                    
                 </div>
 
-                
-                
                 <div className='btnBody'>
                     <button className='allProjects fadeOut' onClick={()=>{window.location.href = 'https://github.com/darshjasani' }}>VIEW ALL PROJECTS</button>
                 </div>
