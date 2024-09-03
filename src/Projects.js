@@ -29,11 +29,10 @@ function Projects() {
   return (
     <>
         <div className='pBody' id="projects">
-            <div className='ptitle'><CircleIcon/>Projects</div>
             <div className='pDesc'>Work that I've done for the past 4 years</div>
             <div className='cardsBody'>
-                <div class="exp-page-wrapper fadeOut" onClick={()=>{window.location.href = 'https://github.com/darshjasani/ChatHub'}}>
-                    <div class="exp-card-container">
+                <div class="exp-page-wrapper">
+                    <div class="exp-card-container fadeOut right" onClick={()=>{window.location.href = 'https://github.com/darshjasani/ChatHub'}}>
                         <a href="" class="exp-hero-image-container">
                             <img class="exp-hero-image" src={chatimg} alt="Spinning glass cube"/>
                         </a>
@@ -49,12 +48,9 @@ function Projects() {
                             <span class="exp-skill">React</span>
                         </div>
 
-                        </div>
+                    </div>
                     
-                </div>
-
-                <div class="exp-page-wrapper fadeOut cardBody1" onClick={()=>{window.location.href = 'https://github.com/darshjasani/BugHound'}}>
-                    <div class="exp-card-container">
+                    <div class="exp-card-container fadeOut left" onClick={()=>{window.location.href = 'https://github.com/darshjasani/BugHound'}}>
                         <a href="" class="exp-hero-image-container">
                             <img class="exp-hero-image" src={bugimg} alt="Spinning glass cube"/>
                         </a>
@@ -70,12 +66,9 @@ function Projects() {
                             <span class="exp-skill">React</span>
                         </div>
 
-                        </div>
-                    
-                </div>
+                    </div>
 
-                <div class="exp-page-wrapper fadeOut cardBody2" onClick={()=>{window.location.href = 'https://github.com/darshjasani/WeatherWebApp'}}>
-                    <div class="exp-card-container">
+                    <div class="exp-card-container fadeOut right" onClick={()=>{window.location.href = 'https://github.com/darshjasani/WeatherWebApp'}}>
                         <a href="" class="exp-hero-image-container">
                             <img class="exp-hero-image" src={weatherimg} alt="Spinning glass cube"/>
                         </a>
@@ -91,12 +84,9 @@ function Projects() {
                             <span class="exp-skill">React</span>
                         </div>
 
-                        </div>
-                    
-                </div>
+                    </div>
 
-                <div class="exp-page-wrapper fadeOut cardBody3" onClick={()=>{window.location.href = 'https://github.com/darshjasani/Movie-Recommender'}}>
-                    <div class="exp-card-container">
+                    <div class="exp-card-container fadeOut left" onClick={()=>{window.location.href = 'https://github.com/darshjasani/Movie-Recommender'}}>
                         <a href="" class="exp-hero-image-container">
                             <img class="exp-hero-image" src={movieimg} alt="Spinning glass cube"/>
                         </a>
@@ -112,12 +102,11 @@ function Projects() {
                             <span class="exp-skill">React</span>
                         </div>
 
-                        </div>
-                    
-                </div>
+                    </div>
 
-                <div className='btnBody'>
-                    <button className='allProjects fadeOut' onClick={()=>{window.location.href = 'https://github.com/darshjasani' }}>VIEW ALL PROJECTS</button>
+                    <div className='btnBody'>
+                        <button className='allProjects fadeOut' onClick={()=>{window.location.href = 'https://github.com/darshjasani' }}>VIEW ALL PROJECTS</button>
+                    </div>
                 </div>
             </div>
         </div>
