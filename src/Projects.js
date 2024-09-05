@@ -32,7 +32,7 @@ function Projects() {
             <div className='pDesc'>Work that I've done for the past 4 years</div>
             <div className='cardsBody'>
                 <div class="exp-page-wrapper">
-                    <div class="exp-card-container fadeOut right" onClick={()=>{window.location.href = 'https://github.com/darshjasani/ChatHub'}}>
+                    <div class="exp-card-container fadeOut right firstCard" onClick={()=>{window.location.href = 'https://github.com/darshjasani/ChatHub'}}>
                         <a href="" class="exp-hero-image-container">
                             <img class="exp-hero-image" src={chatimg} alt="Spinning glass cube"/>
                         </a>
@@ -42,10 +42,10 @@ function Projects() {
                             
                         </main>
                         <div class="exp-skill-box">
-                            <span class="exp-skill">HTML</span>
-                            <span class="exp-skill">CSS</span>
-                            <span class="exp-skill">JS</span>
                             <span class="exp-skill">React</span>
+                            <span class="exp-skill">Firebase</span>
+                            <span class="exp-skill">SQL</span>
+                            <span class="exp-skill">HTML/CSS</span>
                         </div>
 
                     </div>
@@ -60,10 +60,11 @@ function Projects() {
                             
                         </main>
                         <div class="exp-skill-box">
-                            <span class="exp-skill">HTML</span>
-                            <span class="exp-skill">CSS</span>
-                            <span class="exp-skill">JS</span>
+                            <span class="exp-skill">Python</span>
+                            <span class="exp-skill">JavaScript</span>
+                            <span class="exp-skill">Django</span>
                             <span class="exp-skill">React</span>
+                            <span class="exp-skill">SQL</span>
                         </div>
 
                     </div>
@@ -78,10 +79,11 @@ function Projects() {
                             
                         </main>
                         <div class="exp-skill-box">
-                            <span class="exp-skill">HTML</span>
-                            <span class="exp-skill">CSS</span>
-                            <span class="exp-skill">JS</span>
+                            <span class="exp-skill">API</span>
                             <span class="exp-skill">React</span>
+                            <span class="exp-skill">Axios</span>
+                            <span class="exp-skill">Ajax</span>
+                            <span class="exp-skill">HTML/CSS</span>
                         </div>
 
                     </div>
@@ -96,10 +98,10 @@ function Projects() {
                             
                         </main>
                         <div class="exp-skill-box">
-                            <span class="exp-skill">HTML</span>
-                            <span class="exp-skill">CSS</span>
-                            <span class="exp-skill">JS</span>
-                            <span class="exp-skill">React</span>
+                            <span class="exp-skill">Python</span>
+                            <span class="exp-skill">Numpy</span>
+                            <span class="exp-skill">Pandas</span>
+                            <span class="exp-skill">CNN</span>
                         </div>
 
                     </div>

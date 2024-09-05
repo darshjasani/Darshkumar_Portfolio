@@ -26,17 +26,20 @@ function Skills() {
                  <h1 class="skillTitle">Skills</h1>
                     <div className='skillsList'>
                         <div class="skills">
+                            <div class="skill"> <i class="fab fa-java"></i> <span>Java</span> </div>
                             <div class="skill"> <i class="fab fa-react"></i> <span>React</span> </div>
                             <div class="skill"> <i class="fab fa-node-js"></i> <span>Node</span> </div>
                             <div class="skill"> <i class="fab fa-js-square"></i> <span>Javascript</span> </div>
-                            <div class="skill"> <i class="fas fa-database"></i> <span>SQL</span> </div>
                             <div class="skill"> <i class="fab fa-aws"></i> <span>AWS</span> </div>
+                            <div class="skill"> <i class="fab fa-python"></i> <span>Python</span> </div>
+                            <div class="skill"> <i class="fas fa-database"></i> <span>SQL</span> </div>
+                            
                         
                             <div class="skill"> <i class="fab fa-docker"></i> <span>Docker</span> </div>
                             <div class="skill"> <i class="fas fa-cubes"></i> <span>Kubernetes</span> </div>
                             <div class="skill"> <i class="fab fa-figma"></i> <span>Figma</span> </div>
-                            <div class="skill"> <i class="fab fa-java"></i> <span>Java</span> </div>
-                            <div class="skill"> <i class="fab fa-python"></i> <span>Python</span> </div>
+                            
+                            
                         </div>
                     </div>       
             </div>
