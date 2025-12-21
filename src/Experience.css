@@ -1,341 +1,385 @@
-.eBody{
-    color: white;
-    border-bottom: 1px solid white;
-    padding: 10px;
+/* ===== EXPERIENCE SECTION ===== */
+.experience-section {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-primary);
 }
 
-.etitle{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 20px;
-}
-.etitle > .MuiSvgIcon-root{
-    font-size: 20px;
+/* ===== TIMELINE CONTAINER ===== */
+.timeline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-2xl) var(--spacing-md);
 }
 
-.timeline{
-    display: block;
-    width: 80%;
-    margin: 200px  auto;
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, 
+    transparent 0%,
+    var(--primary) 10%,
+    var(--primary) 90%,
+    transparent 100%
+  );
+  transform: translateX(-50%);
 }
 
-.expCard{
-    width: 40%;
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    display: block;
-    margin: -131px 0;
-    position: relative;
-    background-color: red;
-    cursor: pointer;
+/* ===== EXPERIENCE CARD ===== */
+.experience-card {
+  position: relative;
+  width: calc(50% - var(--spacing-xl));
+  margin-bottom: var(--spacing-2xl);
+  animation: fadeIn 0.8s ease-out both;
 }
 
+.experience-card.left {
+  margin-right: auto;
+  padding-right: var(--spacing-xl);
+}
 
-.expCard:nth-child(even){
+.experience-card.right {
     margin-left: auto;
+  padding-left: var(--spacing-xl);
 }
 
-.expCard:nth-child(even)::before{
+.experience-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.experience-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.experience-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.experience-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.experience-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.experience-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* ===== EXPERIENCE MARKER ===== */
+.experience-marker {
+    position: absolute;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background: var(--accent-color);
+  border: 4px solid var(--bg-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 0 20px var(--accent-color);
+  z-index: 10;
+  transition: all var(--transition-normal);
+}
+
+.experience-card.left .experience-marker {
+  right: calc(-25px - var(--spacing-xl));
+}
+
+.experience-card.right .experience-marker {
+  left: calc(-25px - var(--spacing-xl));
+}
+
+.experience-card:hover .experience-marker {
+  transform: scale(1.2) rotate(360deg);
+  box-shadow: 0 0 30px var(--accent-color);
+}
+
+.experience-marker svg {
+  font-size: 1.5rem;
+}
+
+/* ===== EXPERIENCE CONTENT ===== */
+.experience-content {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.experience-card:hover .experience-content {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Arrow indicator */
+.experience-content::before {
     content: '';
     position: absolute;
-    left: -19%;
-    top:50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    border: 5px solid black;
-    border-radius: 50%;
+  top: 25px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
 }
 
-.expCard:nth-child(even)::after{
-    content: '';
-    position: absolute;
-    left: -10%;
-    top:50%;
-    transform: translateY(-50%);
-    width: 7%;
-    height: 2px;
-    background-color: white;
-    z-index: -1;
+.experience-card.left .experience-content::before {
+  right: -20px;
+  border-left-color: var(--border-primary);
+  transition: border-left-color var(--transition-normal);
 }
 
-.expCard:nth-child(odd)::before{
-    content: '';
-    position: absolute;
-    right : -19%;
-    top:50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    border: 5px solid rgb(0, 0, 0);
-    border-radius: 50%;
+.experience-card.right .experience-content::before {
+  left: -20px;
+  border-right-color: var(--border-primary);
+  transition: border-right-color var(--transition-normal);
 }
 
-.expCard:nth-child(odd)::after{
-    content: '';
-    position: absolute;
-    right: -10%;
-    top:50%;
-    transform: translateY(-50%);
-    width: 7%;
-    height: 2px;
-    background-color: white;
-    z-index: -1;
+.experience-card:hover.left .experience-content::before {
+  border-left-color: var(--accent-color);
 }
 
-.expCard:nth-child(1), .expCard:nth-child(1)::before{
-    background-color: rgb(45, 45, 244);
-}
-.expCard:nth-child(2), .expCard:nth-child(2)::before{
-    background-color: green;
+.experience-card:hover.right .experience-content::before {
+  border-right-color: var(--accent-color);
 }
 
-.expCard:nth-child(3), .expCard:nth-child(3)::before{
-    background-color: orange;
-}
-.expCard:nth-child(4), .expCard:nth-child(4)::before{
-    background-color: brown;
-}
-.expCard:nth-child(5), .expCard:nth-child(5)::before{
-    background-color: blueviolet;
-}
-.expCard:nth-child(6), .expCard:nth-child(6)::before{
-    background-color: rgb(244, 150, 166);
-}
-
-.expCard:nth-child(even) .expCardBody::before{
-    content: '';
-    position: absolute;
-    left: -15%;
-    top:0;
-    width: 0px;
-    height: 100%;
-    border: 1px dashed white;
-    z-index: -1;
+/* Glow effect */
+.experience-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--accent-color) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+  pointer-events: none;
 }
 
-.cardTitle{
+.experience-card:hover .experience-glow {
+  opacity: 0.1;
+}
+
+/* ===== EXPERIENCE HEADER ===== */
+.experience-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-.cardPosition{
-    font-size: 35px;
-    font-weight: 500;
-    margin-bottom: -5px;
-}
-.cardDetail > li{
-    padding: 5px;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
 }
 
-@media (max-width:768px) {
-    .timeline{
-        width: 90%;
-    }
+.experience-position {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  transition: color var(--transition-normal);
+}
 
-    .expCard{
-        width: 45%;
-        padding: 0px;
-        border-radius: 10px;
+.experience-card:hover .experience-position {
+  color: var(--accent-color);
+}
+
+.experience-period {
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  transition: all var(--transition-normal);
+}
+
+.experience-card:hover .experience-period {
+  background: var(--accent-color);
         color: white;
-        display: block;
-        margin: -151px 0px;
-        position: relative;
-        background-color: red;
-        cursor: pointer; 
-    }
+}
 
-    .cardPosition{
-        font-size: 16px;
-        font-weight: 500;
-        margin-bottom: -5px;
-    }
-    .cardTitle{
-        font-size: 10px;
+/* ===== EXPERIENCE ACHIEVEMENTS ===== */
+.experience-achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
         display: flex;
         flex-direction: column;
-        margin-bottom: -10px;
-    }
-    .cardDetail{
-        padding: 15px;
-    }
-    .cardDetail > li{
-        font-size: 10px;
-        padding: 0;
-        padding-bottom: 10px;
-        width: auto;
-        height: 90px;
-    }
-
-    .expCard:nth-child(even)::before{
-        content: '';
-        position: absolute;
-        left: -16%;
-        top:50%;
-        transform: translateY(-50%);
-        width: 10px;
-        height: 10px;
-        border: 3px solid black;
-        border-radius: 50%;
-    }
-    
-    .expCard:nth-child(even)::after{
-        content: '';
-        position: absolute;
-        left: -8%;
-        top:50%;
-        transform: translateY(-50%);
-        width: 7%;
-        height: 2px;
-        background-color: white;
-        z-index: -1;
-    }
-
-    .expCard:nth-child(odd)::before{
-        content: '';
-        position: absolute;
-        right : -16%;
-        top:50%;
-        transform: translateY(-50%);
-        width: 10px;
-        height: 10px;
-        border: 2px solid rgb(0, 0, 0);
-        border-radius: 50%;
-    }
-    
-    .expCard:nth-child(odd)::after{
-        content: '';
-        position: absolute;
-        right: -8%;
-        top:50%;
-        transform: translateY(-50%);
-        width: 7%;
-        height: 2px;
-        background-color: white;
-        z-index: -1;
-    }
-    
-    .expCard:nth-child(even) .expCardBody::before{
-        content: '';
-        position: absolute;
-        left: -11%;
-        top:0;
-        width: 0px;
-        height: 100%;
-        border: 1px dashed white;
-        z-index: -1;
-    }
- 
+  gap: var(--spacing-md);
 }
 
-@media (min-width:1600px){
-    .timeline{
-        width: 75%;
-    }
-    .expCard{
-        margin: -101px 0px;
-    }
-    .expCard:nth-child(even) .expCardBody::before{
-        left: -17%;
-    }
-    .expCard:nth-child(even)::before{
-        content: '';
-        position: absolute;
-        left: -20.5%;
-        top:50%;
-        transform: translateY(-50%);
-        width: 35px;
-        height: 35px;
-        border: 5px solid black;
-        border-radius: 50%;
-    }
-    
-    .expCard:nth-child(even)::after{
-        content: '';
-        position: absolute;
-        left: -11%;
-        top:50%;
-        transform: translateY(-50%);
-        width: 7%;
-        height: 2px;
-        background-color: white;
-        z-index: -1;
-    }
-    
-    .expCard:nth-child(odd)::before{
-        content: '';
-        position: absolute;
-        right : -20.5%;
-        top:50%;
-        transform: translateY(-50%);
-        width: 35px;
-        height: 35px;
-        border: 5px solid rgb(0, 0, 0);
-        border-radius: 50%;
-    }
-    
-    .expCard:nth-child(odd)::after{
-        content: '';
-        position: absolute;
-        right: -10.5%;
-        top:50%;
-        transform: translateY(-50%);
-        width: 7%;
-        height: 2px;
-        background-color: white;
-        z-index: -1;
-    }
+.experience-achievements li {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.9375rem;
 }
 
-@media (max-width:375px) {
-    .eBody{
-        padding: 5px;
-    }
-    .timeline{
-        width: 95%;
-    }
-    .expCard{
-        width: 50%;
-        padding: 0px;
-        border-radius: 10px;
-        color: white;
-        display: block;
-        margin: -151px 0px;
-        position: relative;
-        background-color: red;
-        cursor: pointer; 
-    }
+.experience-achievements li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  line-height: 1;
+}
 
-    .cardDetail > li{
-        font-size: 10px;
-        padding: 2px;
-        padding-bottom: 10px;
-        width: auto;
-        height: 90px;
-        
-        
-    }
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+  .timeline-container {
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
 
-    .expCard:nth-child(even)::before{
-        display: none;
-        margin-left: 5px;
-    }
-    
-    .expCard:nth-child(even)::after{
-        display: none;
-    }
+  .experience-card {
+    width: calc(50% - var(--spacing-lg));
+  }
 
-    .expCard:nth-child(odd)::before{
-        display: none;
-    }
-    
-    .expCard:nth-child(odd)::after{
-        display: none;
-    }
-    
-    .expCard:nth-child(even) .expCardBody::before{
-        display: none;
+  .experience-card.left {
+    padding-right: var(--spacing-lg);
+  }
+
+  .experience-card.right {
+    padding-left: var(--spacing-lg);
+  }
+
+  .experience-card.left .experience-marker {
+    right: calc(-25px - var(--spacing-lg));
+  }
+
+  .experience-card.right .experience-marker {
+    left: calc(-25px - var(--spacing-lg));
+  }
+
+  .experience-content {
+    padding: var(--spacing-lg);
+  }
+
+  .experience-position {
+    font-size: 1.25rem;
+  }
+
+  .experience-achievements li {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-section {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .timeline-line {
+    left: 25px;
+  }
+
+  .experience-card {
+    width: 100%;
+    margin-left: 60px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .experience-card.left .experience-marker,
+  .experience-card.right .experience-marker {
+    left: -35px;
+    right: auto;
+  }
+
+  .experience-card.left .experience-content::before {
+    left: -20px;
+    right: auto;
+    border-right-color: var(--border-primary);
+    border-left-color: transparent;
+  }
+
+  .experience-card.right .experience-content::before {
+    left: -20px;
+  }
+
+  .experience-card:hover.left .experience-content::before {
+    border-right-color: var(--accent-color);
+    border-left-color: transparent;
+  }
+
+  .experience-marker {
+    width: 40px;
+    height: 40px;
+  }
+
+  .experience-marker svg {
+    font-size: 1.25rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .experience-position {
+    font-size: 1.125rem;
+  }
+
+  .experience-period {
+    font-size: 0.75rem;
+    padding: 4px var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-container {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .experience-card {
+    margin-left: 50px;
+  }
+
+  .experience-card.left .experience-marker,
+  .experience-card.right .experience-marker {
+    left: -30px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .experience-marker svg {
+    font-size: 1.125rem;
+  }
+
+  .experience-content {
+    padding: var(--spacing-md);
+  }
+
+  .experience-position {
+    font-size: 1rem;
+  }
+
+  .experience-achievements li {
+    font-size: 0.8125rem;
+    padding-left: var(--spacing-md);
+  }
+
+  .experience-achievements li::before {
+    font-size: 1.25rem;
+  }
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+  .experience-card,
+  .experience-marker,
+  .experience-content,
+  .experience-glow {
+    animation: none;
+    transition: none;
     }
 }

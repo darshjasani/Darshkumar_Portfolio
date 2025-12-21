@@ -1,140 +1,165 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './Header.css'
-import img from './profile.jpeg'
-import CircleIcon from '@mui/icons-material/Circle';
-import AddIcon from '@mui/icons-material/Add';
-import RemoveIcon from '@mui/icons-material/Remove';
+import DeveloperSVG from './DeveloperSVG'
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import CodeIcon from '@mui/icons-material/Code';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
 function Header() {
-  const [one, showOne] = useState(true);
-  const [two, showTwo] = useState(true);
-  const [three, showThree] = useState(true);
+  const handleViewResume = () => {
+    window.open('https://drive.google.com/file/d/1tt7oPPlgeITUac9lGfOvSAZRPBAlAA4J/view?usp=sharing', '_blank');
+  };
 
-  const animate = (btnId)=>{
-    const btn = document.getElementById(btnId);
-    const check = btn.classList.contains('animate')
+  const handleScrollToProjects = () => {
+    document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
-    if(check){
-      btn.classList.remove('animate');
-      btn.classList.add('animate1');
+  const stats = [
+    {
+      icon: <CodeIcon />,
+      number: '2+',
+      label: 'Years',
+      subtitle: 'Experience',
+      color: '#6366f1'
+    },
+    {
+      icon: <EmojiEventsIcon />,
+      number: '570+',
+      label: 'Problems',
+      subtitle: 'DSA Expert',
+      color: '#f59e0b'
+    },
+    {
+      icon: <RocketLaunchIcon />,
+      number: '10+',
+      label: 'Projects',
+      subtitle: 'Delivered',
+      color: '#8b5cf6'
     }
-    else{
-      btn.classList.add('animate');
-      btn.classList.remove('animate1');
-    }
-  }
-  const showContent = (textId, btnId) =>{
-    const text = document.getElementById(textId)
-    text.classList.toggle("show");
-    animate(btnId);
-  }
-  const seeMore1 = ()=>{
-    showOne(!one);
-    const text1 = document.getElementById('website-info-idea1')
-    text1.classList.toggle("show")
+  ];
 
-    const text2 = document.getElementById('website-info-idea2')
-    if(text2.classList.contains("show")){
-      showTwo(!two);
-      showContent('website-info-idea2', 'btn2')
-    }
-        
-    const text3 = document.getElementById('website-info-idea3')
-    if(text3.classList.contains("show")){
-      showThree(!three)
-      showContent('website-info-idea3', 'btn3')
-    }
+  const expertise = [
+    'Full-stack development with React, Node.js, and Python',
+    'RESTful API design and microservices architecture',
+    'Database optimization and performance tuning',
+    '570+ data structures and algorithms problems solved'
+  ];
 
-    animate('btn1')
-  }
-  const seeMore2 = ()=>{
-    showTwo(!two);
-    const text2 = document.getElementById('website-info-idea2')
-    text2.classList.toggle("show")
-
-    const text1 = document.getElementById('website-info-idea1')
-    if(text1.classList.contains("show")){
-      showOne(!one);
-      showContent('website-info-idea1', 'btn1')
-    }
-        
-    const text3 = document.getElementById('website-info-idea3')
-    if(text3.classList.contains("show")){
-      showThree(!three)
-      showContent('website-info-idea3', 'btn3')
-    }
-
-    animate('btn2')
-  }
-  const seeMore3 = ()=>{
-    showThree(!three);
-    const text3 = document.getElementById('website-info-idea3')
-    text3.classList.toggle("show")
-
-    const text2 = document.getElementById('website-info-idea2')
-    if(text2.classList.contains("show")){
-      showTwo(!two);
-      showContent('website-info-idea2', 'btn2')
-    }
-        
-    const text1 = document.getElementById('website-info-idea1')
-    if(text1.classList.contains("show")){
-      showOne(!one)
-      showContent('website-info-idea1', 'btn1')
-    }
-
-    animate('btn3')
-  }
+  const achievements = [
+    'Improved system performance by 33%',
+    'Reduced development time from 10 days to 2 days (80% faster)',
+    'Saved 20+ hours weekly through automation',
+    'Enhanced API efficiency by 30%'
+  ];
 
   return (
-    <>
-      <div id="home">
-        <div className='point'><CircleIcon/> About</div>
-        <div className='headerBody'>
-          <div className='details'>
-            <div class="patterns">
-              <svg width="100%" height="100%">
-                <defs> 
-                    <style>
-                @import url("https://fonts.googleapis.com/css?  family=Lora:400,400i,700,700i");
-                    </style>
-                </defs>        
-                <rect x="0" y="0" width="100%" height="100%" fill="url(#polka-dots)"> </rect>
-              <text x="48%" y="40%"  text-anchor="middle">
-                Web & Software Developer
-              </text>
-
-              <text className="secondText" x="48%" y="70%"  text-anchor="middle">
-                based in California.
-              </text>
-            </svg>
-            </div>
+    <section id="home" className='header-section reveal-on-scroll'>
+      <div className='hero-container'>
+        {/* Text Content */}
+        <div className='hero-content'>
+          <div className="hero-badge">
+            <span className="badge-dot"></span>
+            <span>Available for opportunities</span>
           </div>
-          <div>
-            <img src = {img} className='profileImage'/>
+
+          <h1 className='hero-title'>
+            <span className='gradient-text'>Software Engineer</span>
+          </h1>
+
+          <p className='hero-subtitle'>
+            Building scalable, cloud-native backend systems using Python, Java, C/C++, and Linux. 
+            Strong foundation in distributed systems, data structures, and SDLC best practices.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className='hero-actions'>
+            <button className='btn-primary' onClick={handleScrollToProjects} aria-label="View my projects">
+              View Projects
+              <ArrowForwardIcon />
+            </button>
+            <button className='btn-secondary' onClick={handleViewResume} aria-label="View resume">
+              <OpenInNewIcon />
+              View Resume
+            </button>
+          </div>
+
+          {/* Enhanced Stats */}
+          <div className='stats-grid-enhanced'>
+            {stats.map((stat, index) => (
+              <div 
+                key={index} 
+                className='stat-card-enhanced'
+                style={{ '--stat-color': stat.color }}
+              >
+                <div className='stat-icon-wrapper'>
+                  {stat.icon}
+                </div>
+                <div className='stat-content'>
+                  <div className='stat-number'>{stat.number}</div>
+                  <div className='stat-label'>{stat.label}</div>
+                  <div className='stat-subtitle'>{stat.subtitle}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-        
-       <div className='aboutMe'>
-          <div>
-            <div className='headLine'><button className='expandBtn' id = "btn1" onClick={seeMore1}>{one ? <AddIcon/> : <RemoveIcon/>}</button> <span onClick={seeMore1}>Who am I ?</span></div>
-            <div class="col" id="website-info-idea1">Results-driven software development engineer with over 1.5+ years of experience in full stack development, project management, and customer engagements. Proven record of leveraging logical skills to drive code efficiencies, and increase revenue. Determined to help people through technology and contribute to business success.</div>
-            
-          </div>
-          <div>
-            <div className='headLine'><button className='expandBtn' id = "btn2" onClick={seeMore2}>{two ? <AddIcon/> : <RemoveIcon/>}</button><span onClick={seeMore2}>What are my areas of expertise ?</span></div>
-            <div class="col" id="website-info-idea2">Proficient in crafting web development applications with segregated front-end and back-end services, particularly leveraging RESTful APIs. With an extensive track record of solving over 570 data structures and algorithmic problems across multiple online platforms, I have honed a deep understanding of programming concepts, particularly in Java.</div>
-            
-          </div>
-          <div>
-            <div className='headLine'><button className='expandBtn' id = "btn3" onClick={seeMore3}>{three ? <AddIcon/> : <RemoveIcon/>}</button><span onClick={seeMore3}>What are my achievement till date ?</span></div>
-            <div class="col" id="website-info-idea3">Developed and deployed a full-stack application, saving 20+ hours weekly. Reduced server latency by shifting to microservices, cutting development time from 10 to 2 days. Collaborated with developers to optimize code-base via agile methods, resulting in a notable 33% system performance improvement.</div>
-            
-          </div>
 
-       </div>
-        
+        {/* Developer SVG Illustration */}
+        <div className='hero-image-container'>
+          <div className='image-backdrop'></div>
+          <div className='svg-wrapper'>
+            <DeveloperSVG />
+          </div>
+          <div className='image-glow'></div>
+        </div>
       </div>
-    </>
+
+      {/* About Sections - Replacing Accordion */}
+      <div className='about-sections'>
+        {/* About Me Section */}
+        <div className='about-section'>
+          <h2 className='section-heading'>ABOUT ME</h2>
+          <div className='section-divider'></div>
+          <p className='section-text'>
+            Software Engineer with 2+ years of experience building scalable, cloud-native backend systems using Python, Java, 
+            C/C++, and Linux. Strong foundation in data structures, algorithms, object-oriented design, distributed systems, and 
+            SDLC best practices. Experienced in owning services end-to-end, collaborating cross-functionally, and delivering reliable 
+            systems in agile environments.
+          </p>
+        </div>
+
+        {/* Expertise Section */}
+        <div className='about-section'>
+          <h2 className='section-heading'>EXPERTISE</h2>
+          <div className='section-divider'></div>
+          <ul className='expertise-list'>
+            {expertise.map((item, index) => (
+              <li key={index}>
+                <CheckCircleIcon className='check-icon' />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Key Achievements Section */}
+        <div className='about-section'>
+          <h2 className='section-heading'>KEY ACHIEVEMENTS</h2>
+          <div className='section-divider'></div>
+          <ul className='achievements-list'>
+            {achievements.map((item, index) => (
+              <li key={index}>
+                <span className='bullet'>•</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
   )
 }
 
