@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './Header.css'
 import DeveloperSVG from './DeveloperSVG'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
@@ -7,8 +7,35 @@ import CodeIcon from '@mui/icons-material/Code';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
 
 function Header() {
+  const [isAboutVisible, setIsAboutVisible] = useState(false);
+  const aboutSectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Animation triggers every time section becomes visible
+          setIsAboutVisible(entry.isIntersecting);
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (aboutSectionRef.current) {
+      observer.observe(aboutSectionRef.current);
+    }
+
+    return () => {
+      if (aboutSectionRef.current) {
+        observer.unobserve(aboutSectionRef.current);
+      }
+    };
+  }, []);
   const handleViewResume = () => {
     window.open('https://drive.google.com/file/d/1tt7oPPlgeITUac9lGfOvSAZRPBAlAA4J/view?usp=sharing', '_blank');
   };
@@ -48,13 +75,6 @@ function Header() {
     '570+ data structures and algorithms problems solved'
   ];
 
-  const achievements = [
-    'Improved system performance by 33%',
-    'Reduced development time from 10 days to 2 days (80% faster)',
-    'Saved 20+ hours weekly through automation',
-    'Enhanced API efficiency by 30%'
-  ];
-
   return (
     <section id="home" className='header-section reveal-on-scroll'>
       <div className='hero-container'>
@@ -81,8 +101,8 @@ function Header() {
               <ArrowForwardIcon />
             </button>
             <button className='btn-secondary' onClick={handleViewResume} aria-label="View resume">
-              <OpenInNewIcon />
               View Resume
+              <OpenInNewIcon />
             </button>
           </div>
 
@@ -117,46 +137,67 @@ function Header() {
         </div>
       </div>
 
-      {/* About Sections - Replacing Accordion */}
-      <div className='about-sections'>
-        {/* About Me Section */}
-        <div className='about-section'>
-          <h2 className='section-heading'>ABOUT ME</h2>
-          <div className='section-divider'></div>
-          <p className='section-text'>
-            Software Engineer with 2+ years of experience building scalable, cloud-native backend systems using Python, Java, 
-            C/C++, and Linux. Strong foundation in data structures, algorithms, object-oriented design, distributed systems, and 
-            SDLC best practices. Experienced in owning services end-to-end, collaborating cross-functionally, and delivering reliable 
-            systems in agile environments.
-          </p>
-        </div>
+      {/* About Section - Two Column with Scroll Animation */}
+      <div className='about-sections' ref={aboutSectionRef}>
+        <div className='about-section-scroll'>
+          <div className='about-header-scroll'>
+            <h2 className='section-heading-scroll'>ABOUT ME</h2>
+            <div className='section-divider-scroll'></div>
+          </div>
+          
+          <div className='about-two-column-grid'>
+            {/* Left Side - About Text */}
+            <div className={`about-left-content ${isAboutVisible ? 'slide-in-left' : ''}`}>
+              <p className='about-full-text'>
+                Software Engineer with 2+ years of experience building scalable, cloud-native backend systems using Python, Java, C/C++, and Linux. Strong foundation in data structures, algorithms, object-oriented design, distributed systems, and SDLC best practices. Experienced in owning services end-to-end, collaborating cross-functionally, and delivering reliable systems in agile environments.
+              </p>
+              
+              {/* Highlight Cards */}
+              <div className='about-highlights'>
+                <div className='highlight-card'>
+                  <div className='highlight-icon'>
+                    <WorkspacePremiumIcon />
+                  </div>
+                  <div className='highlight-content'>
+                    <h4>Quality First</h4>
+                    <p>Clean, maintainable code with comprehensive testing</p>
+                  </div>
+                </div>
+                
+                <div className='highlight-card'>
+                  <div className='highlight-icon'>
+                    <TrendingUpIcon />
+                  </div>
+                  <div className='highlight-content'>
+                    <h4>Performance Driven</h4>
+                    <p>Optimized systems for scale and efficiency</p>
+                  </div>
+                </div>
+                
+                <div className='highlight-card'>
+                  <div className='highlight-icon'>
+                    <EmojiObjectsIcon />
+                  </div>
+                  <div className='highlight-content'>
+                    <h4>Problem Solver</h4>
+                    <p>Creative solutions to complex technical challenges</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        {/* Expertise Section */}
-        <div className='about-section'>
-          <h2 className='section-heading'>EXPERTISE</h2>
-          <div className='section-divider'></div>
-          <ul className='expertise-list'>
-            {expertise.map((item, index) => (
-              <li key={index}>
-                <CheckCircleIcon className='check-icon' />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Key Achievements Section */}
-        <div className='about-section'>
-          <h2 className='section-heading'>KEY ACHIEVEMENTS</h2>
-          <div className='section-divider'></div>
-          <ul className='achievements-list'>
-            {achievements.map((item, index) => (
-              <li key={index}>
-                <span className='bullet'>•</span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+            {/* Right Side - Expertise with Green Checkmarks */}
+            <div className={`about-right-content ${isAboutVisible ? 'slide-in-right' : ''}`}>
+              <ul className='expertise-list-scroll'>
+                {expertise.map((item, index) => (
+                  <li key={index} className='expertise-item-scroll'>
+                    <CheckCircleIcon className='check-icon-green' />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
