@@ -3,6 +3,8 @@ import './Projects.css';
 import LaunchIcon from '@mui/icons-material/Launch';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import CloseIcon from '@mui/icons-material/Close';
+import StarIcon from '@mui/icons-material/Star';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import chatimg from '../../assets/images/projects/chatapp.png'
 import weatherimg from '../../assets/images/projects/weather.png'
 import movieimg from '../../assets/images/projects/MovieRecom.jpeg'
@@ -10,6 +12,7 @@ import bugimg from '../../assets/images/projects/Bughound.png'
 
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [activeFilter, setActiveFilter] = useState('All');
 
   const projects = [
     {
@@ -21,7 +24,9 @@ function Projects() {
       technologies: ['React.js', 'Firebase', 'Google Auth', 'Real-time DB'],
       github: 'https://github.com/darshjasani/ChatHub',
       demo: 'https://github.com/darshjasani/ChatHub',
-      features: ['Real-time messaging', 'Room creation', 'Google authentication', 'Profile customization']
+      features: ['Real-time messaging', 'Room creation', 'Google authentication', 'Profile customization'],
+      category: 'Web Development',
+      featured: true
     },
     {
       id: 2,
@@ -32,7 +37,8 @@ function Projects() {
       technologies: ['Django', 'PostgreSQL', 'Python', 'Bootstrap'],
       github: 'https://github.com/darshjasani/BugHound',
       demo: 'https://github.com/darshjasani/BugHound',
-      features: ['Bug tracking', 'Role-based access', 'Custom workflows', 'Reporting dashboard']
+      features: ['Bug tracking', 'Role-based access', 'Custom workflows', 'Reporting dashboard'],
+      category: 'Web Development'
     },
     {
       id: 3,
@@ -43,7 +49,8 @@ function Projects() {
       technologies: ['React.js', 'OpenWeatherMap API', 'CSS3', 'Axios'],
       github: 'https://github.com/darshjasani/WeatherWebApp',
       demo: 'https://github.com/darshjasani/WeatherWebApp',
-      features: ['Real-time weather', 'Global search', '5-day forecast', 'Responsive design']
+      features: ['Real-time weather', 'Global search', '5-day forecast', 'Responsive design'],
+      category: 'Web Development'
     },
     {
       id: 4,
@@ -54,9 +61,29 @@ function Projects() {
       technologies: ['Python', 'NumPy', 'Pandas', 'Scikit-learn'],
       github: 'https://github.com/darshjasani/Movie-Recommender',
       demo: 'https://github.com/darshjasani/Movie-Recommender',
-      features: ['Collaborative filtering', 'Gradient descent', 'Rating prediction', 'User preferences']
+      features: ['Collaborative filtering', 'Gradient descent', 'Rating prediction', 'User preferences'],
+      category: 'Machine Learning'
     }
   ];
+
+  const openProject = (project) => {
+    setSelectedProject(project);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+    document.body.style.overflow = 'unset';
+  };
+
+  const categories = ['All', 'Web Development', 'Machine Learning'];
+  
+  const filteredProjects = activeFilter === 'All' 
+    ? projects 
+    : projects.filter(project => project.category === activeFilter);
+
+  const featuredProject = filteredProjects.find(p => p.featured);
+  const regularProjects = filteredProjects.filter(p => !p.featured);
 
   useEffect(() => {
     const items = document.querySelectorAll('.fadeOut');
@@ -73,29 +100,125 @@ function Projects() {
 
     items.forEach(item => observer.observe(item));
     return () => items.forEach(item => observer.unobserve(item));
-  }, []);
-
-  const openProject = (project) => {
-    setSelectedProject(project);
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closeModal = () => {
-    setSelectedProject(null);
-    document.body.style.overflow = 'unset';
-  };
+  }, [activeFilter, filteredProjects]);
 
   return (
     <section id="projects" className='projects-section reveal-on-scroll'>
       <div className='section-header'>
-        <h2 className='section-title'>Featured Work</h2>
+        <h2 className='section-title'>Projects</h2>
         <p className='section-subtitle'>
-          A showcase of projects I've built over the past 4 years
+          Full-stack applications and intelligent systems
         </p>
       </div>
 
-      <div className='projects-grid'>
-        {projects.map((project, index) => (
+      {/* Filter Tabs */}
+      <div className='filter-tabs'>
+        {categories.map(category => (
+          <button
+            key={category}
+            className={`filter-tab ${activeFilter === category ? 'active' : ''}`}
+            onClick={() => setActiveFilter(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      {/* Featured Project */}
+      {featuredProject && (
+        <article className='featured-project fadeOut'>
+          <div className='featured-grid'>
+            <div className='featured-image-wrapper'>
+              <img 
+                src={featuredProject.image} 
+                alt={`${featuredProject.title} preview`}
+                className='featured-image'
+                loading="lazy"
+              />
+              <div className='featured-badge'>
+                <StarIcon className='badge-icon' />
+                <span>Featured Project</span>
+              </div>
+              <div className='featured-overlay'>
+                <div className='overlay-content'>
+                  <TrendingUpIcon className='trending-icon' />
+                  <p>Most Popular</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className='featured-content'>
+              <div className='featured-header'>
+                <div className='featured-category-badge'>
+                  <span className='category-dot'></span>
+                  {featuredProject.category}
+                </div>
+              </div>
+
+              <h3 className='featured-title'>
+                {featuredProject.title}
+              </h3>
+              
+              <p className='featured-description'>{featuredProject.longDescription}</p>
+              
+              <div className='featured-highlights'>
+                <h4 className='highlights-title'>Key Features</h4>
+                <div className='highlights-grid'>
+                  {featuredProject.features.map((feature, idx) => (
+                    <div key={idx} className='highlight-item'>
+                      <div className='highlight-icon'>✓</div>
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className='featured-tech-section'>
+                <h4 className='tech-title'>Built With</h4>
+                <div className='featured-tech'>
+                  {featuredProject.technologies.map((tech, idx) => (
+                    <span key={idx} className='tech-tag featured-tech-tag'>
+                      <span className='tech-dot'></span>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className='featured-actions'>
+                <a
+                  href={featuredProject.github}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='featured-btn secondary'
+                  aria-label={`View ${featuredProject.title} on GitHub`}
+                >
+                  <GitHubIcon />
+                  <span>View Code</span>
+                </a>
+                <a
+                  href={featuredProject.demo}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='featured-btn primary'
+                  aria-label={`View ${featuredProject.title} live demo`}
+                >
+                  <LaunchIcon />
+                  <span>Live Demo</span>
+                  <span className='btn-shine'></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      )}
+
+      {/* Regular Projects Grid */}
+      {regularProjects.length > 0 && (
+        <>
+          <h3 className='subsection-title fadeOut'>More Projects</h3>
+          <div className='projects-grid'>
+            {regularProjects.map((project, index) => (
           <article 
             key={project.id} 
             className='project-card fadeOut'
@@ -153,8 +276,10 @@ function Projects() {
               </div>
             </div>
           </article>
-        ))}
-      </div>
+            ))}
+          </div>
+        </>
+      )}
 
       <div className='projects-cta fadeOut'>
         <p>Want to see more of my work?</p>
