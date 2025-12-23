@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import ErrorBoundary from './ErrorBoundary'
-import Loader from './Loader'
-import Header from './Header';
-import Navbar  from './Navbar';
-import Contact from './Contact';
-import Footer from './Footer';
-import Experience from './Experience';
-import Projects from './Projects';
-import Skills from './Skills';
-import Achievements from './Achievements';
-import './App.css'
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary'
+import Loader from './components/Loader/Loader'
+import Header from './components/Header/Header';
+import Navbar  from './components/Navbar/Navbar';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
+import Experience from './components/Experience/Experience';
+import Projects from './components/Projects/Projects';
+import Skills from './components/Skills/Skills';
+import Achievements from './components/Achievements/Achievements';
+import './styles/App.css'
 
 function App() {
   const [showLoader, setShowLoader] = useState(true);

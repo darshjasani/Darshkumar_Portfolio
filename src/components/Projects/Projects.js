@@ -3,10 +3,10 @@ import './Projects.css';
 import LaunchIcon from '@mui/icons-material/Launch';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import CloseIcon from '@mui/icons-material/Close';
-import chatimg from './chatapp.png'
-import weatherimg from './weather.png'
-import movieimg from './MovieRecom.jpeg'
-import bugimg from './Bughound.png'
+import chatimg from '../../assets/images/projects/chatapp.png'
+import weatherimg from '../../assets/images/projects/weather.png'
+import movieimg from '../../assets/images/projects/MovieRecom.jpeg'
+import bugimg from '../../assets/images/projects/Bughound.png'
 
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);

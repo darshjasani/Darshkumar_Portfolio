@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './Header.css'
-import DeveloperSVG from './DeveloperSVG'
+import DeveloperSVG from '../DeveloperSVG/DeveloperSVG'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import CodeIcon from '@mui/icons-material/Code';
