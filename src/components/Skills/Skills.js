@@ -1,134 +1,227 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Skills.css'
-import htmlImg from '../../assets/images/skills/html.png'
-import cssImg from '../../assets/images/skills/css.png'
-import jsImg from '../../assets/images/skills/js.png'
-import nodejsImg from '../../assets/images/skills/nodejs.png'
-import reactjsImg from '../../assets/images/skills/reactjs-1.jpg'
-import djangoImg from '../../assets/images/skills/django.png'
-import gitImg from '../../assets/images/skills/git.jpg'
-import firebaseImg from '../../assets/images/skills/firebase.jpg'
-import javaImg from '../../assets/images/skills/java.jpg'
-import cImg from '../../assets/images/skills/c.png'
-import pythonImg from '../../assets/images/skills/python.jpg'
-import sqlImg from '../../assets/images/skills/sql.jpg'
-import postgreImg from '../../assets/images/skills/postgres.jpg'
-import postmanImg from '../../assets/images/skills/postman.jpg'
-import mdbImg from '../../assets/images/skills/mongodb.jpg'
-import pandasImg from '../../assets/images/skills/pandas.jpg'
-import tfImg from '../../assets/images/skills/tensorflow.jpg'
 
 function Skills() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
+  // HD Logo URLs from CDN (Simple Icons & DevIcons)
   const skills = [
-    { name: 'HTML', img: htmlImg, category: 'Frontend', level: 95 },
-    { name: 'CSS', img: cssImg, category: 'Frontend', level: 90 },
-    { name: 'JavaScript', img: jsImg, category: 'Frontend', level: 88 },
-    { name: 'Node.js', img: nodejsImg, category: 'Backend', level: 85 },
-    { name: 'React.js', img: reactjsImg, category: 'Frontend', level: 90 },
-    { name: 'Django', img: djangoImg, category: 'Backend', level: 80 },
-    { name: 'Git/GitHub', img: gitImg, category: 'Tools', level: 90 },
-    { name: 'Firebase', img: firebaseImg, category: 'Backend', level: 82 },
-    { name: 'Java', img: javaImg, category: 'Languages', level: 88 },
-    { name: 'C', img: cImg, category: 'Languages', level: 85 },
-    { name: 'Python', img: pythonImg, category: 'Languages', level: 90 },
-    { name: 'SQL', img: sqlImg, category: 'Database', level: 87 },
-    { name: 'PostgreSQL', img: postgreImg, category: 'Database', level: 85 },
-    { name: 'MongoDB', img: mdbImg, category: 'Database', level: 83 },
-    { name: 'Tensorflow', img: tfImg, category: 'Data Science', level: 75 },
-    { name: 'Pandas', img: pandasImg, category: 'Data Science', level: 80 }
+    // Programming Languages
+    { 
+      id: 1, 
+      name: 'Python', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+      color: '#3776AB'
+    },
+    { 
+      id: 2, 
+      name: 'Java', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+      color: '#007396'
+    },
+    { 
+      id: 3, 
+      name: 'C++', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
+      color: '#00599C'
+    },
+    { 
+      id: 4, 
+      name: 'C', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
+      color: '#A8B9CC'
+    },
+    { 
+      id: 5, 
+      name: 'JavaScript', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+      color: '#F7DF1E'
+    },
+    { 
+      id: 6, 
+      name: 'TypeScript', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+      color: '#3178C6'
+    },
+    
+    // Frontend Frameworks
+    { 
+      id: 7, 
+      name: 'React', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+      color: '#61DAFB'
+    },
+    
+    // Backend Frameworks
+    { 
+      id: 8, 
+      name: 'Node.js', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+      color: '#339933'
+    },
+    { 
+      id: 9, 
+      name: 'Express.js', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
+      color: '#68A063'
+    },
+    { 
+      id: 10, 
+      name: 'Django', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg',
+      color: '#092E20'
+    },
+    { 
+      id: 11, 
+      name: 'FastAPI', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg',
+      color: '#009688'
+    },
+    { 
+      id: 12, 
+      name: 'Spring Boot', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg',
+      color: '#6DB33F'
+    },
+    
+    // Testing
+    { 
+      id: 13, 
+      name: 'Pytest', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytest/pytest-original.svg',
+      color: '#0A9EDC'
+    },
+    
+    // Cloud & DevOps
+    { 
+      id: 14, 
+      name: 'AWS', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+      color: '#FF9900'
+    },
+    { 
+      id: 15, 
+      name: 'Docker', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+      color: '#2496ED'
+    },
+    { 
+      id: 16, 
+      name: 'Kubernetes', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg',
+      color: '#326CE5'
+    },
+    { 
+      id: 17, 
+      name: 'Terraform', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg',
+      color: '#7B42BC'
+    },
+    { 
+      id: 18, 
+      name: 'DigitalOcean', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg',
+      color: '#0080FF'
+    },
+    
+    // Databases
+    { 
+      id: 19, 
+      name: 'MySQL', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+      color: '#4479A1'
+    },
+    { 
+      id: 20, 
+      name: 'MongoDB', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+      color: '#47A248'
+    },
+    { 
+      id: 21, 
+      name: 'Redis', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg',
+      color: '#DC382D'
+    },
+    { 
+      id: 22, 
+      name: 'Firebase', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
+      color: '#FFCA28'
+    },
+    
+    // Tools
+    { 
+      id: 24, 
+      name: 'Git', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+      color: '#F05032'
+    },
+    { 
+      id: 25, 
+      name: 'GitHub', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+      color: '#181717'
+    },
   ];
 
-  const categories = ['All', 'Frontend', 'Backend', 'Languages', 'Database', 'Tools', 'Data Science'];
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePosition({
+        x: (e.clientX / window.innerWidth) * 100,
+        y: (e.clientY / window.innerHeight) * 100
+      });
+    };
 
-  const filteredSkills = selectedCategory === 'All' 
-    ? skills 
-    : skills.filter(skill => skill.category === selectedCategory);
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
 
   return (
-    <section id="skills" className='skills-section reveal-on-scroll'>
+    <section id="skills" className='skills-section-new'>
+      {/* Animated Background */}
+      <div className='skills-bg-animation'>
+        <div className='bg-orb orb-1' style={{ transform: `translate(${mousePosition.x * 0.02}%, ${mousePosition.y * 0.02}%)` }}></div>
+        <div className='bg-orb orb-2' style={{ transform: `translate(${mousePosition.x * -0.015}%, ${mousePosition.y * -0.015}%)` }}></div>
+        <div className='bg-orb orb-3' style={{ transform: `translate(${mousePosition.x * 0.025}%, ${mousePosition.y * -0.02}%)` }}></div>
+      </div>
+
+      {/* Section Header */}
       <div className='section-header'>
         <h2 className='section-title'>Technologies & Tools</h2>
         <p className='section-subtitle'>
-          Here are the technologies I work with to bring ideas to life
+          Crafting digital experiences with cutting-edge technologies
         </p>
       </div>
 
-      {/* Category Filter */}
-      <div className='category-filter' role="tablist" aria-label="Filter skills by category">
-        {categories.map((category, index) => (
-          <button
-            key={index}
-            role="tab"
-            aria-selected={selectedCategory === category}
-            aria-controls="skills-grid"
-            className={`filter-btn ${selectedCategory === category ? 'active' : ''}`}
-            onClick={() => setSelectedCategory(category)}
+      {/* Logo Display Grid */}
+      <div className='skills-logo-grid'>
+        {skills.map((skill, index) => (
+          <div
+            key={skill.id}
+            className='logo-item'
+            style={{
+              '--delay': `${index * 0.08}s`,
+              '--skill-color': skill.color
+            }}
           >
-            {category}
-            <span className='filter-count'>
-              {category === 'All' ? skills.length : skills.filter(s => s.category === category).length}
-            </span>
-          </button>
-        ))}
-      </div>
-
-      {/* Skills Grid */}
-      <div id="skills-grid" className='skills-grid' role="tabpanel">
-        {filteredSkills.map((skill, index) => (
-          <div 
-            key={index} 
-            className='skill-card'
-            style={{ animationDelay: `${index * 0.1}s` }}
-          >
-            <div className='skill-icon-wrapper'>
-              <img 
-                src={skill.img} 
-                className='skill-icon' 
-                alt={`${skill.name} icon`}
-                loading="lazy"
-              />
-              <div className='skill-glow'></div>
-            </div>
-            
-            <h3 className='skill-name'>{skill.name}</h3>
-            
-            <div className='skill-progress'>
-              <div className='progress-bar-container'>
-                <div 
-                  className='progress-bar' 
-                  style={{ '--progress': `${skill.level}%` }}
-                  role="progressbar"
-                  aria-valuenow={skill.level}
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  aria-label={`${skill.name} proficiency: ${skill.level}%`}
-                >
-                  <span className='progress-text'>{skill.level}%</span>
-                </div>
-              </div>
-            </div>
-            
-            <span className='skill-category'>{skill.category}</span>
+            <div className='logo-glow'></div>
+            <img 
+              src={skill.logo} 
+              alt={skill.name}
+              className='skill-logo'
+            />
+            <span className='logo-name'>{skill.name}</span>
           </div>
         ))}
       </div>
 
-      {/* Skills Summary */}
-      <div className='skills-summary'>
-        <div className='summary-card'>
-          <span className='summary-number'>{skills.length}+</span>
-          <span className='summary-label'>Technologies</span>
-        </div>
-        <div className='summary-card'>
-          <span className='summary-number'>570+</span>
-          <span className='summary-label'>Problems Solved</span>
-        </div>
-        <div className='summary-card'>
-          <span className='summary-number'>1.5+</span>
-          <span className='summary-label'>Years Experience</span>
-        </div>
+      {/* Floating Elements */}
+      <div className='floating-elements'>
+        <div className='float-element element-1'>💻</div>
+        <div className='float-element element-2'>🎯</div>
+        <div className='float-element element-3'>✨</div>
+        <div className='float-element element-4'>🔥</div>
       </div>
     </section>
   )

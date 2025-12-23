@@ -92,6 +92,32 @@ function Achievements() {
 
   return (
     <section id="achievements" className='achievements-section reveal-on-scroll'>
+      {/* Animated Background Layers */}
+      <div className='animated-background' aria-hidden="true">
+        {/* Floating Particles */}
+        <div className='particles'>
+          {[...Array(40)].map((_, i) => (
+            <div 
+              key={i} 
+              className='particle'
+              style={{
+                '--particle-delay': `${i * 0.2}s`,
+                '--particle-duration': `${8 + (i % 6)}s`,
+                '--particle-x': `${(i * 11) % 100}%`,
+                '--particle-y': `${(i * 17) % 100}%`
+              }}
+            ></div>
+          ))}
+        </div>
+
+        {/* Orbiting Elements */}
+        <div className='orbits'>
+          <div className='orbit orbit-1'></div>
+          <div className='orbit orbit-2'></div>
+          <div className='orbit orbit-3'></div>
+        </div>
+      </div>
+
       <div className='section-header'>
         <h2 className='section-title'>Key Achievements</h2>
         <p className='section-subtitle'>
